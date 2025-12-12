@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from charitics.temptics.com/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:05:17 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +16,79 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom styles for SISDI -->
+    <style>
+        :root {
+            --sisdi-green: #16A34A;
+            --sisdi-yellow: #ffd700;
+        }
+        
+        .sisdi-primary-bg {
+            background-color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-bg {
+            background-color: var(--sisdi-yellow);
+        }
+        
+        .sisdi-primary-text {
+            color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-text {
+            color: var(--sisdi-yellow);
+        }
+        
+        .logo-placeholder {
+            width: 180px;
+            height: 60px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        
+        /* Update existing buttons to use SISDI colors */
+        .ul-btn {
+            background-color: var(--sisdi-green);
+            color: white;
+        }
+        
+        .ul-btn:hover {
+            background-color: #138a3f;
+            color: white;
+        }
+        
+        /* Update section headings */
+        .ul-section-title {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update navigation active state */
+        .ul-header-nav a:hover,
+        .ul-header-nav a.active {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update event titles */
+        .ul-event-title a {
+            color: var(--sisdi-green);
+        }
+        
+        .ul-event-title a:hover {
+            color: #138a3f;
+        }
+        
+        /* Update pagination */
+        .ul-pagination a.active {
+            background-color: var(--sisdi-green);
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +102,7 @@
         <div class="ul-sidebar-header">
             <div class="ul-sidebar-header-logo">
                 <a href="index-2.html">
-                    <img src="assets/img/logo.svg" alt="logo" class="logo">
+                    <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px;">
                 </a>
             </div>
             <!-- sidebar closer -->
@@ -60,7 +130,9 @@
         <div class="ul-header-bottom to-be-sticky">
             <div class="ul-header-bottom-wrapper ul-header-container">
                 <div class="logo-container">
-                    <a href="index-2.html" class="d-inline-block"><img src="assets/img/logo.svg" alt="logo" class="logo"></a>
+                    <a href="index-2.html" class="d-inline-block">
+                        <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px;">
+                    </a>
                 </div>
 
                 <!-- header nav -->
@@ -77,10 +149,10 @@
                                 <a href="about.html" role="button">About</a>
                             </div>
                             <div>
-                                <a href="donations.html" role="button">Donations</a>
+                                <a href="donations.html" role="button">Support Us</a>
                             </div>
                             <div>
-                                <a href="events.html" role="button">Events</a>
+                                <a href="events.html" role="button" class="active">Events</a>
                             </div>
                             <div>
                                 <a href="hear-from-us.html" role="button">Stay updated</a>
@@ -132,11 +204,11 @@
                                     <span class="date">29 <span>July</span></span>
                                 </div>
                                 <div class="ul-event-txt">
-                                    <h3 class="ul-event-title"><a href="event-details.html">Manager Disapproved of the Most Recent Work.</a></h3>
-                                    <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
+                                    <h3 class="ul-event-title"><a href="event-details.html">Regional School Soccer Championship</a></h3>
+                                    <p class="ul-event-descr">Join us for our annual tournament featuring teams from all participating schools in region.</p>
                                     <div class="ul-event-info">
                                         <span class="ul-event-info-title">Venue</span>
-                                        <p class="ul-event-info-descr">350 5th AveNew York, NY 118 United States</p>
+                                        <p class="ul-event-info-descr">City Sports Complex, Main Stadium</p>
                                     </div>
                                     <a href="event-details.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Event Details</a>
                                 </div>
@@ -148,14 +220,14 @@
                             <div class="ul-event ul-event--inner">
                                 <div class="ul-event-img">
                                     <img src="assets/img/blog-b-1.jpg" alt="Event Image">
-                                    <span class="date">29 <span>July</span></span>
+                                    <span class="date">15 <span>Aug</span></span>
                                 </div>
                                 <div class="ul-event-txt">
-                                    <h3 class="ul-event-title"><a href="event-details.html">Manager Disapproved of the Most Recent Work.</a></h3>
-                                    <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
+                                    <h3 class="ul-event-title"><a href="event-details.html">Coach Certification Workshop</a></h3>
+                                    <p class="ul-event-descr">A comprehensive training program for teachers and community members interested in becoming certified soccer coaches.</p>
                                     <div class="ul-event-info">
                                         <span class="ul-event-info-title">Venue</span>
-                                        <p class="ul-event-info-descr">350 5th AveNew York, NY 118 United States</p>
+                                        <p class="ul-event-info-descr">SISDI Training Center</p>
                                     </div>
                                     <a href="event-details.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Event Details</a>
                                 </div>
@@ -167,14 +239,14 @@
                             <div class="ul-event ul-event--inner">
                                 <div class="ul-event-img">
                                     <img src="assets/img/blog-b-2.jpg" alt="Event Image">
-                                    <span class="date">29 <span>July</span></span>
+                                    <span class="date">05 <span>Sep</span></span>
                                 </div>
                                 <div class="ul-event-txt">
-                                    <h3 class="ul-event-title"><a href="event-details.html">Manager Disapproved of the Most Recent Work.</a></h3>
-                                    <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
+                                    <h3 class="ul-event-title"><a href="event-details.html">Soccer Skills Development Camp</a></h3>
+                                    <p class="ul-event-descr">A week-long intensive camp focused on developing technical skills and tactical understanding of game.</p>
                                     <div class="ul-event-info">
                                         <span class="ul-event-info-title">Venue</span>
-                                        <p class="ul-event-info-descr">350 5th AveNew York, NY 118 United States</p>
+                                        <p class="ul-event-info-descr">Riverside Sports Academy</p>
                                     </div>
                                     <a href="event-details.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Event Details</a>
                                 </div>
@@ -186,14 +258,14 @@
                             <div class="ul-event ul-event--inner">
                                 <div class="ul-event-img">
                                     <img src="assets/img/blog-3.jpg" alt="Event Image">
-                                    <span class="date">29 <span>July</span></span>
+                                    <span class="date">20 <span>Oct</span></span>
                                 </div>
                                 <div class="ul-event-txt">
-                                    <h3 class="ul-event-title"><a href="event-details.html">Manager Disapproved of the Most Recent Work.</a></h3>
-                                    <p class="ul-event-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut</p>
+                                    <h3 class="ul-event-title"><a href="event-details.html">Annual Fundraising Gala</a></h3>
+                                    <p class="ul-event-descr">Join us for an evening of celebration and fundraising to support our mission of bringing soccer education to more schools.</p>
                                     <div class="ul-event-info">
                                         <span class="ul-event-info-title">Venue</span>
-                                        <p class="ul-event-info-descr">350 5th AveNew York, NY 118 United States</p>
+                                        <p class="ul-event-info-descr">Grand Hotel Convention Center</p>
                                     </div>
                                     <a href="event-details.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Event Details</a>
                                 </div>
@@ -250,7 +322,7 @@
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
                             <span class="ul-footer-top-contact-info-label">Send Email</span>
-                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@exmple.com">info@exmple.com</a></h5>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@sisdi.org">info@sisdi.org</a></h5>
                         </div>
                     </div>
 
@@ -264,7 +336,7 @@
                         </div>
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
-                            <span class="ul-footer-top-contact-info-label">Call Emergency</span>
+                            <span class="ul-footer-top-contact-info-label">Call Us</span>
                             <h5 class="ul-footer-top-contact-info-address"><a href="tel:88012365499">+88 0123 654 99</a></h5>
                         </div>
                     </div>
@@ -276,8 +348,10 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
                     <div class="ul-footer-about">
-                        <a href="index-2.html"><img src="assets/img/logo-white.svg" alt="logo" class="logo"></a>
-                        <p class="ul-footer-about-txt">Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia mollis</p>
+                        <a href="index-2.html">
+                            <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px; margin-bottom: 15px;">
+                        </a>
+                        <p class="ul-footer-about-txt">SISDI is dedicated to integrating soccer programs into school curriculums to promote physical fitness, teamwork, and academic achievement.</p>
                         <div class="ul-footer-socials">
                             <a href="#"><i class="flaticon-facebook"></i></a>
                             <a href="#"><i class="flaticon-twitter"></i></a>
@@ -291,15 +365,15 @@
 
                         <div class="ul-footer-widget-links">
                             <a href="about.html">About Us</a>
-                            <a href="services.html">Our Services</a>
-                            <a href="blog.html">Our Blogs</a>
-                            <a href="faq.html">FAQ’S</a>
+                            <a href="initiatives.html">Our Initiatives</a>
+                            <a href="events.html">Events</a>
+                            <a href="blog.html">News & Updates</a>
                             <a href="contact.html">Contact Us</a>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-footer-recent-posts">
-                        <h3 class="ul-footer-widget-title">Recent Posts</h3>
+                        <h3 class="ul-footer-widget-title">Latest News</h3>
 
                         <div class="ul-blog-sidebar-posts">
                             <!-- single post -->
@@ -314,7 +388,7 @@
                                         <span>May 12, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">New Soccer Curriculum Launches</a></h4>
                                 </div>
                             </div>
 
@@ -327,19 +401,19 @@
                                 <div class="txt">
                                     <span class="date">
                                         <span class="icon"><i class="flaticon-calendar"></i></span>
-                                        <span>May 12, 2025</span>
+                                        <span>May 10, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">Regional Tournament Success</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-nwsltr-widget">
-                        <h3 class="ul-footer-widget-title">Contact Us</h3>
+                        <h3 class="ul-footer-widget-title">Stay Updated</h3>
                         <div class="ul-footer-widget-links ul-footer-contact-links">
-                            <a href="mailto:info@example.com"><i class="flaticon-mail"></i> info@example.com</a>
+                            <a href="mailto:info@sisdi.org"><i class="flaticon-mail"></i> info@sisdi.org</a>
                             <a href="tel:123-456-7890"><i class="flaticon-telephone-call"></i> 123-456-7890</a>
                         </div>
                         <form action="#" class="ul-nwsltr-form">
@@ -352,7 +426,7 @@
                                 <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
                                     <input type="checkbox" name="agreement" id="nwsltr-agreement" hidden>
                                     <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
-                                    <span class="ul-checkbox-txt">I agree with the <a href="#">Privacy Policy</a></span>
+                                    <span class="ul-checkbox-txt">I agree with <a href="#">Privacy Policy</a></span>
                                 </label>
                             </div>
                         </form>
@@ -366,7 +440,7 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-bottom-wrapper">
                     <p class="copyright-txt">&copy;
-                        <span id="footer-copyright-year"></span> Charitics. All rights reserved
+                        <span id="footer-copyright-year"></span> SISDI. All rights reserved
                     </p>
                     <div class="ul-footer-bottom-nav"><a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></div>
                 </div>
@@ -395,11 +469,56 @@
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tab.js"></script>
-    <!-- <script src="assets/js/countdown.js"></script> -->
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
+    
+    <!-- Additional custom script for SISDI -->
+    <script>
+        // Apply SISDI colors to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('.ul-section-title');
+            sectionTitles.forEach(title => {
+                title.style.color = '#16A34A';
+            });
+            
+            // Update buttons
+            const buttons = document.querySelectorAll('.ul-btn');
+            buttons.forEach(btn => {
+                btn.style.backgroundColor = '#16A34A';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#138a3f';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#16A34A';
+                });
+            });
+            
+            // Update event titles
+            const eventTitles = document.querySelectorAll('.ul-event-title a');
+            eventTitles.forEach(title => {
+                title.style.color = '#16A34A';
+                title.addEventListener('mouseenter', function() {
+                    this.style.color = '#138a3f';
+                });
+                title.addEventListener('mouseleave', function() {
+                    this.style.color = '#16A34A';
+                });
+            });
+            
+            // Update pagination
+            const paginationActive = document.querySelector('.ul-pagination a.active');
+            if (paginationActive) {
+                paginationActive.style.backgroundColor = '#16A34A';
+            }
+            
+            // Set current year in footer
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('footer-copyright-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
 </body>
-
-
-<!-- Mirrored from charitics.temptics.com/events.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:05:18 GMT -->
 </html>

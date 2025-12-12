@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from charitics.temptics.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:04:59 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +16,75 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom styles for SISDI -->
+    <style>
+        :root {
+            --sisdi-green: #16A34A;
+            --sisdi-yellow: #ffd700;
+        }
+        
+        .sisdi-primary-bg {
+            background-color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-bg {
+            background-color: var(--sisdi-yellow);
+        }
+        
+        .sisdi-primary-text {
+            color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-text {
+            color: var(--sisdi-yellow);
+        }
+        
+        .logo-placeholder {
+            width: 180px;
+            height: 60px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        
+        /* Update existing buttons to use SISDI colors */
+        .ul-btn {
+            background-color: var(--sisdi-green);
+            color: white;
+        }
+        
+        .ul-btn:hover {
+            background-color: #138a3f;
+            color: white;
+        }
+        
+        /* Update section headings */
+        .ul-section-title {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update navigation active state */
+        .ul-header-nav a:hover,
+        .ul-header-nav a.active {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update tab navigation */
+        .tab-nav.active {
+            background-color: var(--sisdi-green);
+        }
+        
+        /* Update CTA section */
+        .ul-cta {
+            background-color: var(--sisdi-green);
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +98,7 @@
         <div class="ul-sidebar-header">
             <div class="ul-sidebar-header-logo">
                 <a href="index-2.html">
-                    <img src="assets/img/logo.svg" alt="logo" class="logo">
+                    <div class="logo-placeholder">SISDI Logo</div>
                 </a>
             </div>
             <!-- sidebar closer -->
@@ -60,7 +126,9 @@
         <div class="ul-header-bottom to-be-sticky">
             <div class="ul-header-bottom-wrapper ul-header-container">
                 <div class="logo-container">
-                    <a href="index-2.html" class="d-inline-block"><img src="assets/img/logo.svg" alt="logo" class="logo"></a>
+                    <a href="index-2.html" class="d-inline-block">
+                        <div class="logo-placeholder">SISDI Logo</div>
+                    </a>
                 </div>
 
                 <!-- header nav -->
@@ -74,10 +142,10 @@
                                 <a href="initiatives.html" role="button">Initiatives</a>
                             </div>
                             <div>
-                                <a href="about.html" role="button">About</a>
+                                <a href="about.html" role="button" class="active">About</a>
                             </div>
                             <div>
-                                <a href="donations.html" role="button">Donations</a>
+                                <a href="donations.html" role="button">Support Us</a>
                             </div>
                             <div>
                                 <a href="events.html" role="button">Events</a>
@@ -137,31 +205,31 @@
                     <!-- txt -->
                     <div class="col">
                         <div class="ul-about-txt">
-                            <span class="ul-section-sub-title ul-section-sub-title--2">About US</span>
-                            <h2 class="ul-section-title">Helping Each Other can Make World Better</h2>
-                            <p class="ul-section-descr">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit The aspernaturaut odit aut fugit, sed quia consequuntur. Nonprofits around the world apply and join us to access more funding.</p>
+                            <span class="ul-section-sub-title ul-section-sub-title--2">About SISDI</span>
+                            <h2 class="ul-section-title">Empowering Youth Through Soccer and Education</h2>
+                            <p class="ul-section-descr">SISDI is dedicated to integrating soccer programs into school curriculums to promote physical fitness, teamwork, and academic achievement. We believe that sports can be a powerful tool for education and personal development.</p>
 
                             <div class="ul-about-block">
                                 <div class="block-left">
                                     <div class="block-heading">
                                         <div class="icon"><i class="flaticon-love"></i></div>
-                                        <h3 class="block-title">Start Helping Team</h3>
+                                        <h3 class="block-title">Join Our Team</h3>
                                     </div>
 
                                     <ul class="block-list">
-                                        <li>There are many variations of solve</li>
+                                        <li>Help us bring soccer education to more schools</li>
                                     </ul>
                                 </div>
                                 <div class="block-right"><img src="assets/img/about-block-img.jpg" alt="Image"></div>
                             </div>
 
                             <div class="ul-about-bottom">
-                                <a href="about.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Explore More</a>
+                                <a href="about.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Learn More</a>
 
                                 <div class="ul-about-call">
                                     <div class="icon"><i class="flaticon-telephone-call"></i></div>
                                     <div class="txt">
-                                        <span class="call-title">Call Any Time</span>
+                                        <span class="call-title">Contact Us</span>
                                         <a href="tel:+612345678990">+61 2345 678 990</a>
                                     </div>
                                 </div>
@@ -187,32 +255,32 @@
                         <div class="col">
                             <div class="ul-stats-item">
                                 <i class="flaticon-costumer"></i>
-                                <span class="number">260+</span>
-                                <span class="txt">Total Happy Children</span>
+                                <span class="number">500+</span>
+                                <span class="txt">Student Athletes</span>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="ul-stats-item">
                                 <i class="flaticon-team"></i>
-                                <span class="number">110+</span>
-                                <span class="txt">Total Our Volunteer</span>
+                                <span class="number">50+</span>
+                                <span class="txt">Partner Schools</span>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="ul-stats-item">
                                 <i class="flaticon-package"></i>
-                                <span class="number">190+</span>
-                                <span class="txt">Our Products & Gifts</span>
+                                <span class="number">30+</span>
+                                <span class="txt">Active Programs</span>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="ul-stats-item">
                                 <i class="flaticon-relationship"></i>
-                                <span class="number">560+</span>
-                                <span class="txt">Worldwide Donor</span>
+                                <span class="number">100+</span>
+                                <span class="txt">Certified Coaches</span>
                             </div>
                         </div>
                     </div>
@@ -228,10 +296,10 @@
                 <!-- heading -->
                 <div class="ul-section-heading align-items-center wow animate__fadeInUp">
                     <div class="left">
-                        <span class="ul-section-sub-title">Our Organization History</span>
-                        <h2 class="ul-section-title text-white">Charitics Information of Event Schedule</h2>
+                        <span class="ul-section-sub-title">Our Organization</span>
+                        <h2 class="ul-section-title text-white">SISDI Mission, Vision & History</h2>
                     </div>
-                    <a href="events.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Donate Now</a>
+                    <a href="support.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Support Us</a>
                 </div>
 
                 <!-- tab group -->
@@ -244,15 +312,15 @@
                             </div>
 
                             <div class="ul-about-tab-txt">
-                                <h3 class="ul-about-tab-title">Where can I get some?</h3>
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <h3 class="ul-about-tab-title">Our Mission</h3>
+                                <p class="ul-about-tab-descr">At SISDI, our mission is to integrate soccer programs into school curriculums to promote physical fitness, teamwork, and academic achievement. We believe that sports can be a powerful tool for education and personal development.</p>
                                 <ul class="ul-about-tab-list">
-                                    <li>Suspendisse pulvinar orci vitae condimentum feugiat.</li>
-                                    <li>Curabitur cursus sapien eu ex cursus ultrices ac nec purus.</li>
-                                    <li>Duis vehicula elit ut placerat rutrum.</li>
-                                    <li>Nunc et felis non neque vehicula porttitor.</li>
+                                    <li>Provide quality soccer education to students of all backgrounds</li>
+                                    <li>Develop life skills through sports participation</li>
+                                    <li>Create pathways for academic and athletic success</li>
+                                    <li>Foster community engagement through soccer</li>
                                 </ul>
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <p class="ul-about-tab-descr">Through our programs, we aim to create a generation of well-rounded individuals who excel both on the field and in the classroom, equipped with the skills and confidence to succeed in all aspects of life.</p>
                             </div>
                         </div>
 
@@ -264,16 +332,16 @@
 
                             <div class="ul-about-tab-txt">
                                 <h3 class="ul-about-tab-title">Our Vision</h3>
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <p class="ul-about-tab-descr">Our vision is to create a world where every child has access to quality soccer education that complements their academic journey. We envision schools where sports and academics work together to develop well-rounded individuals.</p>
                                 <ul class="ul-about-tab-list">
-                                    <li>Suspendisse pulvinar orci vitae condimentum feugiat.</li>
-                                    <li>Curabitur cursus sapien eu ex cursus ultrices ac nec purus.</li>
-                                    <li>Duis vehicula elit ut placerat rutrum.</li>
-                                    <li>Nunc et felis non neque vehicula porttitor.</li>
-                                    <li>Suspendisse pulvinar orci vitae condimentum feugiat.</li>
-                                    <li>Curabitur cursus sapien eu ex cursus ultrices ac nec purus.</li>
-                                    <li>Duis vehicula elit ut placerat rutrum.</li>
-                                    <li>Nunc et felis non neque vehicula porttitor.</li>
+                                    <li>Establish soccer programs in schools nationwide</li>
+                                    <li>Create a comprehensive curriculum that integrates soccer and education</li>
+                                    <li>Develop a network of certified soccer educators</li>
+                                    <li>Provide scholarships for talented student athletes</li>
+                                    <li>Build state-of-the-art soccer facilities in underserved communities</li>
+                                    <li>Foster international exchange programs for young athletes</li>
+                                    <li>Establish research partnerships to study the impact of sports on education</li>
+                                    <li>Create pathways to professional and collegiate soccer opportunities</li>
                                 </ul>
                             </div>
                         </div>
@@ -286,11 +354,11 @@
 
                             <div class="ul-about-tab-txt">
                                 <h3 class="ul-about-tab-title">Our History</h3>
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <p class="ul-about-tab-descr">SISDI was founded in 2015 by a group of educators and soccer enthusiasts who recognized the potential of sports to enhance educational outcomes. What began as a small pilot program in three schools has now grown to impact over 500 students across 50 schools.</p>
 
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <p class="ul-about-tab-descr">In 2017, we launched our Coach Certification Program, training teachers and community members to become qualified soccer coaches. This program has been instrumental in ensuring the quality and sustainability of our school soccer programs.</p>
 
-                                <p class="ul-about-tab-descr">Integer lobortis, velit quis facilisis pellentesque, massa quam pretium ligula, eget mattis arcu elit at nisi. Nullam nec enim at urna tempor fringilla. Vestibulum sed nibh laoreet, vulputate nibh a, sollicitudin arcu. Nam tempus nisl arcu. Phasellus cursus et tellus eget tincidunt. Phasellus mattis sagittis luctus. Maecenas vel justo sollicitudin, laoreet mauris vitae, rutrum urna.</p>
+                                <p class="ul-about-tab-descr">By 2020, we had established our Regional School Soccer Tournament, which has become an annual highlight for participating schools, fostering healthy competition and community spirit. In 2022, we introduced our Student Athlete Scholarship Program, supporting talented individuals in pursuing both academic and athletic excellence.</p>
                             </div>
                         </div>
                     </div>
@@ -319,10 +387,10 @@
                 <div class="ul-section-heading justify-content-between">
                     <div class="left">
                         <span class="ul-section-sub-title">Our Team</span>
-                        <h2 class="ul-section-title">Skilled Legal Professionals Dedicated to You</h2>
+                        <h2 class="ul-section-title">Dedicated Professionals Committed to Youth Development</h2>
                     </div>
                     <div>
-                        <a href="team.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join With us</a>
+                        <a href="team.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join Our Team</a>
                     </div>
                 </div>
 
@@ -340,8 +408,8 @@
                                 </div>
                             </div>
                             <div class="ul-team-member-info">
-                                <h3 class="ul-team-member-name"><a href="team-details.html">John Doe</a></h3>
-                                <p class="ul-team-member-designation">Attorney</p>
+                                <h3 class="ul-team-member-name"><a href="team-details.html">Michael Johnson</a></h3>
+                                <p class="ul-team-member-designation">Executive Director</p>
                             </div>
                         </div>
                     </div>
@@ -359,8 +427,8 @@
                                 </div>
                             </div>
                             <div class="ul-team-member-info">
-                                <h3 class="ul-team-member-name"><a href="team-details.html">John Doe</a></h3>
-                                <p class="ul-team-member-designation">Attorney</p>
+                                <h3 class="ul-team-member-name"><a href="team-details.html">Sarah Williams</a></h3>
+                                <p class="ul-team-member-designation">Program Director</p>
                             </div>
                         </div>
                     </div>
@@ -378,8 +446,8 @@
                                 </div>
                             </div>
                             <div class="ul-team-member-info">
-                                <h3 class="ul-team-member-name"><a href="team-details.html">John Doe</a></h3>
-                                <p class="ul-team-member-designation">Attorney</p>
+                                <h3 class="ul-team-member-name"><a href="team-details.html">David Martinez</a></h3>
+                                <p class="ul-team-member-designation">Head Coach</p>
                             </div>
                         </div>
                     </div>
@@ -397,8 +465,8 @@
                                 </div>
                             </div>
                             <div class="ul-team-member-info">
-                                <h3 class="ul-team-member-name"><a href="team-details.html">John Doe</a></h3>
-                                <p class="ul-team-member-designation">Attorney</p>
+                                <h3 class="ul-team-member-name"><a href="team-details.html">Emily Chen</a></h3>
+                                <p class="ul-team-member-designation">Education Coordinator</p>
                             </div>
                         </div>
                     </div>
@@ -411,9 +479,9 @@
         <!-- CTA(CALL TO ACTION) SECTION START -->
         <section class="ul-cta">
             <div class="ul-container">
-                <span class="ul-section-sub-title">Start Donating Poor People</span>
-                <h2 class="ul-cta-title">Children Need Your Help By Donating Today</h2>
-                <a href="#" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Get A Quote</a>
+                <span class="ul-section-sub-title">Support Our Mission</span>
+                <h2 class="ul-cta-title">Help Us Bring Soccer Education to More Schools</h2>
+                <a href="support.html" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Support Us Now</a>
             </div>
             <img src="assets/img/cta-vector.svg" alt="Vector" class="ul-cta-vector">
         </section>
@@ -425,8 +493,8 @@
             <div class="ul-container wow animate__fadeInUp">
                 <div class="ul-section-heading">
                     <div>
-                        <span class="ul-section-sub-title">Start donating poor people</span>
-                        <h2 class="ul-section-title">What People Say About us</h2>
+                        <span class="ul-section-sub-title">What People Say About Us</span>
+                        <h2 class="ul-section-title">Testimonials from Our Community</h2>
                     </div>
                     <a href="#" class="ul-btn"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> All Testimonials</a>
                 </div>
@@ -443,8 +511,8 @@
                                 <i class="flaticon-star"></i>
                                 <i class="flaticon-star-1"></i>
                             </div>
-                            <span class="ul-testimonial-2-overview-title">5 Start Rating</span>
-                            <p class="ul-testimonial-2-overview-descr">Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.</p>
+                            <span class="ul-testimonial-2-overview-title">5 Star Rating</span>
+                            <p class="ul-testimonial-2-overview-descr">SISDI has transformed our school's sports program. The students are more engaged, showing improved teamwork skills both on and off the field.</p>
                             <div class="ul-testimonial-2-overview-reviewers">
                                 <img src="assets/img/reviewer-1.png" alt="Reviewer">
                                 <img src="assets/img/reviewer-2.png" alt="Reviewer">
@@ -462,13 +530,13 @@
                                 <div class="swiper-slide">
                                     <div class="ul-review ul-review-2">
                                         <span class="icon"><i class="flaticon-quote-1"></i></span>
-                                        <p class="ul-review-descr">Climb it see the world, not so the world can see you. This is due to their excellent service.Targ consultation apartments. ndulgence off under folly death wrote cause her yet a spite. Plan upon yet way cold spot its week. Almost do am or limits hearts. Resolve a hearts. Almost do hearts.</p>
+                                        <p class="ul-review-descr">SISDI has transformed our school's sports program. The students are more engaged, showing improved teamwork skills both on and off the field. The academic support component has made a significant difference in their classroom performance.</p>
                                         <div class="ul-review-bottom">
                                             <div class="ul-review-reviewer">
                                                 <div class="reviewer-image"><img src="assets/img/reviewer-1.png" alt="reviewer image"></div>
                                                 <div>
-                                                    <h3 class="reviewer-name">Esther Howard</h3>
-                                                    <span class="reviewer-role">Web Designer</span>
+                                                    <h3 class="reviewer-name">Robert Thompson</h3>
+                                                    <span class="reviewer-role">School Principal</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -479,13 +547,13 @@
                                 <div class="swiper-slide">
                                     <div class="ul-review ul-review-2">
                                         <span class="icon"><i class="flaticon-quote-1"></i></span>
-                                        <p class="ul-review-descr">Climb it see the world, not so the world can see you. This is due to their excellent service.Targ consultation apartments. ndulgence off under folly death wrote cause her yet a spite. Plan upon yet way cold spot its week. Almost do am or limits hearts. Resolve a hearts. Almost do hearts.</p>
+                                        <p class="ul-review-descr">As a parent, I've seen remarkable growth in my child since joining the SISDI program. The balance between academics and athletics is perfect, and the coaches truly care about each student's development.</p>
                                         <div class="ul-review-bottom">
                                             <div class="ul-review-reviewer">
                                                 <div class="reviewer-image"><img src="assets/img/reviewer-2.png" alt="reviewer image"></div>
                                                 <div>
-                                                    <h3 class="reviewer-name">Daniyel karlos</h3>
-                                                    <span class="reviewer-role">Web Designer</span>
+                                                    <h3 class="reviewer-name">Maria Rodriguez</h3>
+                                                    <span class="reviewer-role">Parent</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -538,7 +606,7 @@
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
                             <span class="ul-footer-top-contact-info-label">Send Email</span>
-                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@exmple.com">info@exmple.com</a></h5>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@sisdi.org">info@sisdi.org</a></h5>
                         </div>
                     </div>
 
@@ -552,7 +620,7 @@
                         </div>
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
-                            <span class="ul-footer-top-contact-info-label">Call Emergency</span>
+                            <span class="ul-footer-top-contact-info-label">Call Us</span>
                             <h5 class="ul-footer-top-contact-info-address"><a href="tel:88012365499">+88 0123 654 99</a></h5>
                         </div>
                     </div>
@@ -564,8 +632,10 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
                     <div class="ul-footer-about">
-                        <a href="index-2.html"><img src="assets/img/logo-white.svg" alt="logo" class="logo"></a>
-                        <p class="ul-footer-about-txt">Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia mollis</p>
+                        <a href="index-2.html">
+                            <div class="logo-placeholder" style="background-color: #f0f0f0; color: #777; margin-bottom: 15px;">SISDI Logo</div>
+                        </a>
+                        <p class="ul-footer-about-txt">SISDI is dedicated to integrating soccer programs into school curriculums to promote physical fitness, teamwork, and academic achievement.</p>
                         <div class="ul-footer-socials">
                             <a href="#"><i class="flaticon-facebook"></i></a>
                             <a href="#"><i class="flaticon-twitter"></i></a>
@@ -579,15 +649,15 @@
 
                         <div class="ul-footer-widget-links">
                             <a href="about.html">About Us</a>
-                            <a href="services.html">Our Services</a>
-                            <a href="blog.html">Our Blogs</a>
-                            <a href="faq.html">FAQ’S</a>
+                            <a href="initiatives.html">Our Initiatives</a>
+                            <a href="events.html">Events</a>
+                            <a href="blog.html">News & Updates</a>
                             <a href="contact.html">Contact Us</a>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-footer-recent-posts">
-                        <h3 class="ul-footer-widget-title">Recent Posts</h3>
+                        <h3 class="ul-footer-widget-title">Latest News</h3>
 
                         <div class="ul-blog-sidebar-posts">
                             <!-- single post -->
@@ -602,7 +672,7 @@
                                         <span>May 12, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">New Soccer Curriculum Launches</a></h4>
                                 </div>
                             </div>
 
@@ -615,19 +685,19 @@
                                 <div class="txt">
                                     <span class="date">
                                         <span class="icon"><i class="flaticon-calendar"></i></span>
-                                        <span>May 12, 2025</span>
+                                        <span>May 10, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">Regional Tournament Success</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-nwsltr-widget">
-                        <h3 class="ul-footer-widget-title">Contact Us</h3>
+                        <h3 class="ul-footer-widget-title">Stay Updated</h3>
                         <div class="ul-footer-widget-links ul-footer-contact-links">
-                            <a href="mailto:info@example.com"><i class="flaticon-mail"></i> info@example.com</a>
+                            <a href="mailto:info@sisdi.org"><i class="flaticon-mail"></i> info@sisdi.org</a>
                             <a href="tel:123-456-7890"><i class="flaticon-telephone-call"></i> 123-456-7890</a>
                         </div>
                         <form action="#" class="ul-nwsltr-form">
@@ -640,7 +710,7 @@
                                 <label for="nwsltr-agreement" class="ul-checkbox-wrapper">
                                     <input type="checkbox" name="agreement" id="nwsltr-agreement" hidden>
                                     <span class="ul-checkbox"><i class="flaticon-tick"></i></span>
-                                    <span class="ul-checkbox-txt">I agree with the <a href="#">Privacy Policy</a></span>
+                                    <span class="ul-checkbox-txt">I agree with <a href="#">Privacy Policy</a></span>
                                 </label>
                             </div>
                         </form>
@@ -654,7 +724,7 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-bottom-wrapper">
                     <p class="copyright-txt">&copy;
-                        <span id="footer-copyright-year"></span> Charitics. All rights reserved
+                        <span id="footer-copyright-year"></span> SISDI. All rights reserved
                     </p>
                     <div class="ul-footer-bottom-nav"><a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></div>
                 </div>
@@ -683,11 +753,50 @@
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tab.js"></script>
-    <!-- <script src="assets/js/countdown.js"></script> -->
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
+    
+    <!-- Additional custom script for SISDI -->
+    <script>
+        // Apply SISDI colors to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('.ul-section-title');
+            sectionTitles.forEach(title => {
+                title.style.color = '#16A34A';
+            });
+            
+            // Update buttons
+            const buttons = document.querySelectorAll('.ul-btn');
+            buttons.forEach(btn => {
+                btn.style.backgroundColor = '#16A34A';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#138a3f';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#16A34A';
+                });
+            });
+            
+            // Update tab navigation
+            const tabNavs = document.querySelectorAll('.tab-nav.active');
+            tabNavs.forEach(nav => {
+                nav.style.backgroundColor = '#16A34A';
+            });
+            
+            // Update CTA section
+            const ctaSection = document.querySelector('.ul-cta');
+            if (ctaSection) {
+                ctaSection.style.backgroundColor = '#16A34A';
+            }
+            
+            // Set current year in footer
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('footer-copyright-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
 </body>
-
-
-<!-- Mirrored from charitics.temptics.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:05:00 GMT -->
 </html>

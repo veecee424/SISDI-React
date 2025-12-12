@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from charitics.temptics.com/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:05:04 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +16,74 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom styles for SISDI -->
+    <style>
+        :root {
+            --sisdi-green: #16A34A;
+            --sisdi-yellow: #ffd700;
+        }
+        
+        .sisdi-primary-bg {
+            background-color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-bg {
+            background-color: var(--sisdi-yellow);
+        }
+        
+        .sisdi-primary-text {
+            color: var(--sisdi-green);
+        }
+        
+        .sisdi-secondary-text {
+            color: var(--sisdi-yellow);
+        }
+        
+        .logo-placeholder {
+            width: 180px;
+            height: 60px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        
+        /* Update existing buttons to use SISDI colors */
+        .ul-btn {
+            background-color: var(--sisdi-green);
+            color: white;
+        }
+        
+        .ul-btn:hover {
+            background-color: #138a3f;
+            color: white;
+        }
+        
+        /* Update section headings */
+        .ul-section-title {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update navigation active state */
+        .ul-header-nav a:hover,
+        .ul-header-nav a.active {
+            color: var(--sisdi-green);
+        }
+        
+        /* Update project titles */
+        .ul-project-title a {
+            color: var(--sisdi-green);
+        }
+        
+        .ul-project-title a:hover {
+            color: #138a3f;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +97,7 @@
         <div class="ul-sidebar-header">
             <div class="ul-sidebar-header-logo">
                 <a href="index-2.html">
-                    <img src="assets/img/logo.svg" alt="logo" class="logo">
+                    <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px;">
                 </a>
             </div>
             <!-- sidebar closer -->
@@ -60,7 +125,9 @@
         <div class="ul-header-bottom to-be-sticky">
             <div class="ul-header-bottom-wrapper ul-header-container">
                 <div class="logo-container">
-                    <a href="index-2.html" class="d-inline-block"><img src="assets/img/logo.svg" alt="logo" class="logo"></a>
+                    <a href="index-2.html" class="d-inline-block">
+                        <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px;">
+                    </a>
                 </div>
 
                 <!-- header nav -->
@@ -71,13 +138,13 @@
                                 <a href="index.html" role="button">Home</a>
                             </div>
                             <div>
-                                <a href="initiatives.html" role="button">Initiatives</a>
+                                <a href="initiatives.html" role="button" class="active">Initiatives</a>
                             </div>
                             <div>
                                 <a href="about.html" role="button">About</a>
                             </div>
                             <div>
-                                <a href="donations.html" role="button">Donations</a>
+                                <a href="donations.html" role="button">Support Us</a>
                             </div>
                             <div>
                                 <a href="events.html" role="button">Events</a>
@@ -106,7 +173,7 @@
         <!-- BREADCRUMBS SECTION START -->
         <section class="ul-breadcrumb ul-section-spacing">
             <div class="ul-container">
-                <h2 class="ul-breadcrumb-title">Initiatives</h2>
+                <h2 class="ul-breadcrumb-title">Our Initiatives</h2>
                 <ul class="ul-breadcrumb-nav">
                     <li><a href="index-2.html">Home</a></li>
                     <li><span class="separator"><i class="flaticon-right"></i></span></li>
@@ -117,21 +184,21 @@
         <!-- BREADCRUMBS SECTION END -->
 
 
-        <!-- PROJECTS SECTION START -->
+        <!-- INITIATIVES SECTION START -->
         <section class="ul-projects ul-section-spacing">
             <div class="ul-container">
                 <div class="row ul-bs-row justify-content-center">
                     <div class="col-lg-8 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-1.jpg" alt="Project Image">
+                                <img src="assets/img/project-1.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">School Soccer Development Program</a></h3>
+                                    <p class="ul-project-descr">Education & Sports Development</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -139,14 +206,14 @@
                     <div class="col-lg-4 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ul-project--sm">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-2.jpg" alt="Project Image">
+                                <img src="assets/img/project-2.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">Coach Certification Program</a></h3>
+                                    <p class="ul-project-descr">Training & Development</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -154,14 +221,14 @@
                     <div class="col-lg-4 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ul-project--sm">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-3.jpg" alt="Project Image">
+                                <img src="assets/img/project-3.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">Student Athlete Scholarships</a></h3>
+                                    <p class="ul-project-descr">Education Support</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -169,14 +236,14 @@
                     <div class="col-lg-8 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-4.jpg" alt="Project Image">
+                                <img src="assets/img/project-4.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">Regional School Soccer Tournament</a></h3>
+                                    <p class="ul-project-descr">Competition & Community</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -184,14 +251,14 @@
                     <div class="col-lg-8 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-1.jpg" alt="Project Image">
+                                <img src="assets/img/project-1.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">Soccer Equipment for Schools</a></h3>
+                                    <p class="ul-project-descr">Equipment & Facilities</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -199,21 +266,21 @@
                     <div class="col-lg-4 col-md-6 col-10 col-xxs-12">
                         <div class="ul-project ul-project--sm">
                             <div class="ul-project-img">
-                                <img src="assets/img/project-2.jpg" alt="Project Image">
+                                <img src="assets/img/project-2.jpg" alt="Initiative Image">
                             </div>
                             <div class="ul-project-txt">
                                 <div>
-                                    <h3 class="ul-project-title"><a href="project-details.html">Child trouble & care</a></h3>
-                                    <p class="ul-project-descr"> Demostic & Transportation</p>
+                                    <h3 class="ul-project-title"><a href="initiative-details.html">Soccer Skills Development Camp</a></h3>
+                                    <p class="ul-project-descr">Training & Development</p>
                                 </div>
-                                <a href="project-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
+                                <a href="initiative-details.html" class="ul-project-btn"><i class="flaticon-up-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- PROJECTS SECTION END -->
+        <!-- INITIATIVES SECTION END -->
     </main>
 
 
@@ -248,7 +315,7 @@
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
                             <span class="ul-footer-top-contact-info-label">Send Email</span>
-                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@exmple.com">info@exmple.com</a></h5>
+                            <h5 class="ul-footer-top-contact-info-address"><a href="mailto:info@sisdi.org">info@sisdi.org</a></h5>
                         </div>
                     </div>
 
@@ -262,7 +329,7 @@
                         </div>
                         <!-- txt -->
                         <div class="ul-footer-top-contact-info-txt">
-                            <span class="ul-footer-top-contact-info-label">Call Emergency</span>
+                            <span class="ul-footer-top-contact-info-label">Call Us</span>
                             <h5 class="ul-footer-top-contact-info-address"><a href="tel:88012365499">+88 0123 654 99</a></h5>
                         </div>
                     </div>
@@ -274,8 +341,10 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-middle-wrapper wow animate__fadeInUp">
                     <div class="ul-footer-about">
-                        <a href="index-2.html"><img src="assets/img/logo-white.svg" alt="logo" class="logo"></a>
-                        <p class="ul-footer-about-txt">Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia mollis</p>
+                        <a href="index-2.html">
+                            <img src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1765479560/WhatsApp_Image_2025-11-21_at_00.09.00_c952b8be_nxgsid.jpg" alt="SISDI Logo" style="max-height: 60px; margin-bottom: 15px;">
+                        </a>
+                        <p class="ul-footer-about-txt">SISDI is dedicated to integrating soccer programs into school curriculums to promote physical fitness, teamwork, and academic achievement.</p>
                         <div class="ul-footer-socials">
                             <a href="#"><i class="flaticon-facebook"></i></a>
                             <a href="#"><i class="flaticon-twitter"></i></a>
@@ -289,15 +358,15 @@
 
                         <div class="ul-footer-widget-links">
                             <a href="about.html">About Us</a>
-                            <a href="services.html">Our Services</a>
-                            <a href="blog.html">Our Blogs</a>
-                            <a href="faq.html">FAQ’S</a>
+                            <a href="initiatives.html">Our Initiatives</a>
+                            <a href="events.html">Events</a>
+                            <a href="blog.html">News & Updates</a>
                             <a href="contact.html">Contact Us</a>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-footer-recent-posts">
-                        <h3 class="ul-footer-widget-title">Recent Posts</h3>
+                        <h3 class="ul-footer-widget-title">Latest News</h3>
 
                         <div class="ul-blog-sidebar-posts">
                             <!-- single post -->
@@ -312,7 +381,7 @@
                                         <span>May 12, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">New Soccer Curriculum Launches</a></h4>
                                 </div>
                             </div>
 
@@ -325,19 +394,19 @@
                                 <div class="txt">
                                     <span class="date">
                                         <span class="icon"><i class="flaticon-calendar"></i></span>
-                                        <span>May 12, 2025</span>
+                                        <span>May 10, 2025</span>
                                     </span>
 
-                                    <h4 class="title"><a href="blog-details.html">There are many vario ns of passages of</a></h4>
+                                    <h4 class="title"><a href="blog-details.html">Regional Tournament Success</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="ul-footer-widget ul-nwsltr-widget">
-                        <h3 class="ul-footer-widget-title">Contact Us</h3>
+                        <h3 class="ul-footer-widget-title">Stay Updated</h3>
                         <div class="ul-footer-widget-links ul-footer-contact-links">
-                            <a href="mailto:info@example.com"><i class="flaticon-mail"></i> info@example.com</a>
+                            <a href="mailto:info@sisdi.org"><i class="flaticon-mail"></i> info@sisdi.org</a>
                             <a href="tel:123-456-7890"><i class="flaticon-telephone-call"></i> 123-456-7890</a>
                         </div>
                         <form action="#" class="ul-nwsltr-form">
@@ -364,7 +433,7 @@
             <div class="ul-footer-container">
                 <div class="ul-footer-bottom-wrapper">
                     <p class="copyright-txt">&copy;
-                        <span id="footer-copyright-year"></span> Charitics. All rights reserved
+                        <span id="footer-copyright-year"></span> SISDI. All rights reserved
                     </p>
                     <div class="ul-footer-bottom-nav"><a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></div>
                 </div>
@@ -393,11 +462,50 @@
     <!-- custom JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tab.js"></script>
-    <!-- <script src="assets/js/countdown.js"></script> -->
     <script src="assets/js/accordion.js"></script>
     <script src="assets/js/progressbar.js"></script>
+    
+    <!-- Additional custom script for SISDI -->
+    <script>
+        // Apply SISDI colors to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update section titles
+            const sectionTitles = document.querySelectorAll('.ul-section-title');
+            sectionTitles.forEach(title => {
+                title.style.color = '#16A34A';
+            });
+            
+            // Update buttons
+            const buttons = document.querySelectorAll('.ul-btn');
+            buttons.forEach(btn => {
+                btn.style.backgroundColor = '#16A34A';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#138a3f';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '#16A34A';
+                });
+            });
+            
+            // Update project titles
+            const projectTitles = document.querySelectorAll('.ul-project-title a');
+            projectTitles.forEach(title => {
+                title.style.color = '#16A34A';
+                title.addEventListener('mouseenter', function() {
+                    this.style.color = '#138a3f';
+                });
+                title.addEventListener('mouseleave', function() {
+                    this.style.color = '#16A34A';
+                });
+            });
+            
+            // Set current year in footer
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('footer-copyright-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
 </body>
-
-
-<!-- Mirrored from charitics.temptics.com/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Oct 2025 12:05:04 GMT -->
 </html>
