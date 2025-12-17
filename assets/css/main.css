@@ -1,0 +1,954 @@
+/* -------------------- Variables / Brand Colors -------------------- */
+:root {
+  --brand-green: #16A34A;
+  --brand-deep-green: #064E3B;
+  --brand-gold: #FFD700;
+  --brand-light-yellow: #FFFF75;
+  --white: #FFFFFF;
+}
+
+/* -------------------- Global Body -------------------- */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--brand-deep-green);
+  padding-top: 60px; /* fixed navbar */
+  scroll-behavior: smooth;
+}
+
+/* -------------------- Headings -------------------- */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--brand-green);
+}
+
+/* Section titles */
+.section-title {
+  color: var(--brand-green);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* -------------------- Buttons -------------------- */
+.btn-donate {
+  background-color: var(--brand-gold);
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 12px 28px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-donate:hover, .btn-donate:focus {
+  background-color: #e6c200;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  color: #000;
+}
+
+.navbar .nav-link:hover {
+  color: var(--brand-gold);
+  transition: color 0.3s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.sisdi-navbar {
+  background-color: rgba(6, 78, 59, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+.navbar-brand {
+  color: #FFD700;
+}
+
+.navbar-brand:hover {
+  color: #FFFF75;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #FFD700 !important;
+}
+
+
+/* -------------------- Hero Sections -------------------- */
+section[class*="-hero"] {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+section[class*="-hero"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6,78,59,0.6); /* deep green overlay */
+  z-index: 1;
+}
+
+section[class*="-hero"] .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------- Cards -------------------- */
+.program-card,
+.impact-card,
+.testimonial-card,
+.involve-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background-color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.program-card:hover,
+.impact-card:hover,
+.testimonial-card:hover,
+.involve-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Card text */
+.donation-card p,
+.program-card p,
+.impact-card p,
+.testimonial-card p,
+.involve-card p {
+  color: var(--brand-deep-green);
+  font-size: 1rem;
+}
+
+/* Card headings */
+.donation-card h4,
+.program-card h4,
+.impact-card h3,
+.testimonial-card strong,
+.involve-card h4 {
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+/* -------------------- Sections -------------------- */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Light backgrounds */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+  background-color: var(--brand-deep-green);
+  color: var(--white);
+  padding: 40px 0;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--brand-gold);
+}
+
+/* -------------------- Fade-in Animation -------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- Responsive Adjustments -------------------- */
+@media (max-width: 768px) {
+  .btn-donate {
+    width: 100%;
+  }
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .involve-card, .program-card, .impact-card, .testimonial-card, .donation-card {
+    padding: 25px 20px;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/hero.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(6, 78, 59, 0.85),
+    rgba(6, 78, 59, 0.75)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+
+.hero-cta .btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* Donate button brand styling */
+.btn-donate {
+  background-color: #FFD700;
+  color: #064E3B;
+  border: none;
+}
+
+.btn-donate:hover {
+  background-color: #FFFF75;
+  color: #064E3B;
+}
+
+/* =========================
+   WHY THIS MATTERS
+========================= */
+
+.why-matters-section {
+  background-color: #F0FDF4;
+}
+
+.section-title {
+  color: #064E3B;
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+.section-lead {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.why-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.why-card-title {
+  color: #16A34A;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.why-card-text {
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   OUR APPROACH
+========================= */
+
+.our-approach-section {
+  background-color: #ffffff;
+}
+
+.approach-card {
+  background-color: #F9FAFB;
+  padding: 2.5rem 1.5rem;
+  height: 100%;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.approach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.approach-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background-color: #064E3B;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.approach-title {
+  color: #064E3B;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.approach-text {
+  color: #4B5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
+.impact-section {
+  background-color: #064E3B;
+  color: #ffffff;
+}
+
+.impact-section .section-title,
+.impact-section .section-lead {
+  color: #ffffff;
+}
+
+.impact-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.impact-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFD700;
+}
+
+.impact-label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.impact-footnote {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   GET INVOLVED
+========================= */
+
+.get-involved-section {
+  background-color: #F9FAFB;
+}
+
+.involve-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.involve-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.involve-title {
+  color: #064E3B;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.involve-text {
+  color: #4B5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.involve-card .btn-outline-primary {
+  border-color: #064E3B;
+  color: #064E3B;
+}
+
+.involve-card .btn-outline-primary:hover {
+  background-color: #064E3B;
+  color: #ffffff;
+}
+
+.involve-card.highlight {
+  border: 2px solid #FFD700;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta-section {
+  background-color: #064E3B;
+  color: #ffffff;
+}
+
+.final-cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.final-cta-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.final-cta-actions .btn {
+  padding: 0.8rem 2.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.sisdi-footer {
+  background: linear-gradient(135deg, #064E3B 0%, #022C22 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+}
+
+.footer-divider {
+  border-color: rgba(255, 215, 0, 0.3);
+  margin: 2rem 0 1rem;
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.sisdi-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #FFD700, transparent);
+}
+
+/* =========================
+   FOOTER SOCIALS
+========================= */
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #FFD700;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.page-hero {
+  background-color: #F9FAFB;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #064E3B;
+}
+
+.page-lead {
+  font-size: 1.1rem;
+  color: #4B5563;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background-color: #ffffff;
+}
+
+.about-alt-section {
+  background-color: #F9FAFB;
+}
+
+/* =========================
+   IMPACT PAGE STYLES
+========================= */
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFD700;
+}
+
+.impact-story,
+.impact-programs,
+.impact-reach {
+  background-color: #ffffff;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+
+/* =========================
+   ABOUT PAGE – COLOUR & IMAGES
+========================= */
+
+.about-hero {
+  background:
+    linear-gradient(rgba(6, 78, 59, 0.7), rgba(6, 78, 59, 0.7)),
+    url("/images/about-hero.jpeg") center / cover no-repeat;
+  padding: 6rem 0;
+}
+
+.bg-soft-gold {
+  background-color: #FFF9DB;
+}
+
+.about-pan-african {
+  background: linear-gradient(135deg, #064E3B, #022C22);
+}
+
+.info-card img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   PROGRAMS PAGE
+========================= */
+
+.programs-hero {
+  background:
+    linear-gradient(rgba(6, 78, 59, 0.75), rgba(6, 78, 59, 0.75)),
+    url("/images/programs-hero.jpg") center / cover no-repeat;
+  padding: 6rem 0;
+}
+
+.program-section {
+  background-color: #ffffff;
+}
+
+.program-alt-section {
+  background-color: #F9FAFB;
+}
+
+/* =========================
+   IMPACT PAGE
+========================= */
+
+.impact-hero {
+  background:
+    linear-gradient(rgba(6, 78, 59, 0.75), rgba(6, 78, 59, 0.75)),
+    url("/images/impact-hero.jpg") center / cover no-repeat;
+  padding: 6rem 0;
+}
+
+.impact-stats {
+  background-color: #FFF9DB;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h2 {
+  font-weight: 800;
+  color: #064E3B !important;
+  opacity: 1 !important;
+}
+
+.stat-card p {
+  margin: 0;
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.impact-section {
+  background-color: #ffffff;
+}
+
+.impact-alt-section {
+  background-color: #F9FAFB;
+}
+
+/* =========================
+   IMPACT PAGE TEXT FIX
+========================= */
+
+.impact-section,
+.impact-alt-section,
+.impact-stats {
+  color: #1F2933; /* dark neutral */
+}
+
+.impact-section p,
+.impact-alt-section p,
+.impact-stats p {
+  color: #4B5563;
+}
+
+.impact-section h2,
+.impact-alt-section h2,
+.impact-stats h2 {
+    opacity: 1 !important;
+  transform: none !important;
+  color: #064E3B !important;
+}
+
+.fade-in * {
+  opacity: 1;
+  transform: none;
+}
+
+/* =========================
+   CONTACT PAGE (NO IMAGE)
+========================= */
+
+.contact-header {
+  background-color: #064E3B;
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+}
+
+.contact-header .page-title {
+  color: #ffffff;
+}
+
+.contact-header .page-lead {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: #E5E7EB;
+}
+
+.contact-options {
+  background-color: #F9FAFB;
+}
+
+.involve-card.simple {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  height: 100%;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: #064E3B;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.contact-form-section {
+  background-color: #ffffff;
+}
+
+.contact-form .form-control {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* =========================
+   GET INVOLVED PAGE
+========================= */
+
+.get-involved-header {
+  background-color: #064E3B;
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+}
+
+.get-involved-header .page-title {
+  color: #ffffff;
+}
+
+.get-involved-header .page-lead {
+  max-width: 750px;
+  margin: 1rem auto 0;
+  color: #E5E7EB;
+}
+
+.get-involved-options {
+  background-color: #F9FAFB;
+}
+
+.get-involved-cta {
+  background-color: #FFF9DB;
+}
+
+/* =========================
+   DONATIONS PAGE (POLISHED)
+========================= */
+
+.donate-header {
+  background-color: #064E3B;
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+}
+
+.donate-header .page-title {
+  color: #ffffff;
+}
+
+.donate-header .page-lead {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: #E5E7EB;
+}
+
+.donation-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-card.featured {
+  border: 2px solid #FFD700;
+}
+
+.donation-card.dark {
+  background-color: #022C22;
+  color: #ffffff;
+}
+
+.donation-card.dark h4 {
+  color: #FFD700;
+}
+
+.donation-card.dark h4,
+.donation-card.dark p,
+.donation-card.dark strong {
+  color: #ffffff;
+}
+
+.donation-card.dark .text-light-muted {
+  color: #CBD5E1;
+}
+
+.text-light-muted {
+  color: #CBD5E1;
+}
+
+.donation-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.donation-card-body h4 {
+  color: #064E3B;
+  font-weight: 700;
+}
+
+.bank-details p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.dark-section {
+  background: linear-gradient(135deg, #064E3B, #022C22);
+  color: #ffffff;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #FFD700;
+  margin: 1.25rem auto 2rem;
+}
+
+.donation-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMPACT STATS — LIGHT BAND
+========================= */
+
+.light-band {
+  background-color: #F9FAFB;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #064E3B;
+  font-weight: 500;
+}

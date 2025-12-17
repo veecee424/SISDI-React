@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head', { title: 'About Us' }) %>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <main>
+
+      <!-- HERO WITH IMAGE -->
+      <section class="about-hero fade-in">
+        <div class="container text-center">
+          <h1 class="page-title text-white">About SISDI</h1>
+          <p class="page-lead text-white">
+            Empowering children across Africa through football, education, and life skills.
+          </p>
+        </div>
+      </section>
+
+      <!-- MISSION & VISION -->
+      <section class="about-section fade-in">
+        <div class="container py-5">
+          <div class="row align-items-center g-5">
+            <div class="col-md-6">
+              <img
+                src="/images/about-mission.jpeg"
+                alt="Education and mentorship"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2 class="section-title">Our Mission</h2>
+              <p>
+                Schools In Soccer Development Initiative (SISDI) provides children with
+                access to quality football development within schools, integrating sport
+                and education to nurture confident, disciplined, and capable individuals.
+              </p>
+
+              <h2 class="section-title mt-4">Our Vision</h2>
+              <p>
+                A future where every African child has the opportunity to grow through
+                education, sport, and strong community support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DO (COLOURED BLOCK) -->
+      <section class="about-alt-section fade-in">
+        <div class="container py-5">
+          <h2 class="section-title text-center mb-5">What We Do</h2>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="info-card">
+                <img
+                  src="/images/about-program.jpeg"
+                  class="img-fluid rounded-3 mb-3"
+                  alt="Football training"
+                />
+                <h5>School-Based Football</h5>
+                <p>
+                  Structured football programs embedded into school environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-card">
+                <img
+                  src="/images/about-education.jpeg"
+                  class="img-fluid rounded-3 mb-3"
+                  alt="Education support"
+                />
+                <h5>Education Integration</h5>
+                <p>
+                  Football used as a tool to reinforce discipline, attendance, and learning.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-card">
+                <img
+                  src="/images/about-life-skills.jpeg"
+                  class="img-fluid rounded-3 mb-3"
+                  alt="Life skills and mentorship"
+                />
+                <h5>Life Skills Development</h5>
+                <p>
+                  Leadership, teamwork, resilience, and confidence built on and off the pitch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- PAN-AFRICAN -->
+      <section class="about-pan-african fade-in">
+        <div class="container py-5">
+          <div class="row align-items-center g-5">
+            <div class="col-md-6">
+              <h2 class="section-title text-white">Pan-African Reach</h2>
+              <p class="text-white">
+                SISDI operates across Africa, adapting to local cultures while maintaining
+                a shared commitment to youth development through sport and education.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="/images/about-africa.jpeg"
+                alt="Pan African youth"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="final-cta-section fade-in">
+        <div class="container py-5 text-center">
+          <h2 class="final-cta-title">Be Part of the Change</h2>
+          <p class="final-cta-text mt-3">
+            Help us shape a better future for children across Africa.
+          </p>
+          <a href="/donate" class="btn btn-donate mt-4">Support SISDI</a>
+        </div>
+      </section>
+
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/scroll-animations.js"></script>
+  </body>
+</html>

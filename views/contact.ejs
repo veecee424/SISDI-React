@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head', { title: 'Contact' }) %>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <main>
+
+      <!-- PAGE HEADER -->
+      <section class="contact-header fade-in">
+        <div class="container text-center">
+          <h1 class="page-title">Contact us</h1>
+          <p class="page-lead">
+            Have a question, idea, or enquiry? We’d love to hear from you.
+          </p>
+        </div>
+      </section>
+
+      <!-- INVOLVEMENT OPTIONS -->
+      <section class="contact-options fade-in">
+        <div class="container py-5">
+          <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+              <div class="involve-card simple">
+                <div class="icon-circle">✉️</div>
+                <h5>General Enquiry</h5>
+                <p>Questions about SISDI or our programs.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="involve-card simple">
+              <div class="icon-circle">🤝</div>
+              <h5>Partnership Enquiry</h5>
+              <p>Organisations interested in collaborating.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="involve-card simple">
+              <div class="icon-circle">⚽</div>
+              <h5>Sponsorship Enquiry</h5>
+              <p>Brands and supporters exploring sponsorship opportunities.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section class="contact-form-section fade-in">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+
+              <h2 class="section-title text-center mb-4">Contact SISDI</h2>
+
+              <form class="contact-form">
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Full Name"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email Address"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-12">
+                    <select class="form-control" required>
+                      <option value="">I want to...</option>
+                      <option>Volunteer</option>
+                      <option>Partner</option>
+                      <option>Sponsor</option>
+                      <option>General Enquiry</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Your message"
+                      required
+                    ></textarea>
+                  </div>
+
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-donate">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/scroll-animations.js"></script>
+  </body>
+</html>
