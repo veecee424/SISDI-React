@@ -6,19 +6,16 @@
 
     <main>
       <!-- HERO -->
-      <section class="impact-hero dark-section fade-in">
-        <div class="container text-center py-5">
-          <h1 class="page-title text-white">Our Impact</h1>
-          <div class="section-divider"></div>
-          <p class="page-lead">
-            Measuring success beyond the pitch — transforming lives through
-            football, education, and opportunity.
-          </p>
-        </div>
-      </section>
+      <%- include('partials/page-hero', {
+        title: 'Our Impact',
+        subtitle: 'Measuring success beyond the pitch — transforming lives through football, education, and opportunity.',
+        variant: 'impact',
+        fadeClass: 'fade-in'
+      }) %>
+
 
       <!-- IMPACT STATS -->
-      <section class="impact-stats light-band fade-in">
+      <section class="impact-stats section light-band fade-in">
         <div class="container py-5">
           <div class="row text-center g-4">
 
@@ -56,7 +53,7 @@
 
 
       <!-- IMPACT STORY -->
-      <section class="impact-story fade-in">
+      <section class="impact-story section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5">
 
@@ -91,7 +88,7 @@
       </section>
 
       <!-- PROGRAM IMPACT -->
-      <section class="impact-programs fade-in">
+      <section class="impact-programs section fade-in">
         <div class="container py-5">
           <div class="text-center mb-5">
             <h2 class="section-title">How Our Programs Make a Difference</h2>
@@ -101,7 +98,7 @@
           <div class="row g-4">
 
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <h4>School-Based Football</h4>
                 <p>
                   Structured training integrated into school schedules to improve
@@ -111,7 +108,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <h4>Education Support</h4>
                 <p>
                   Academic mentorship ensures children remain engaged and
@@ -121,7 +118,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <h4>Life Skills Development</h4>
                 <p>
                   Leadership, teamwork, and personal development programs
@@ -135,14 +132,13 @@
       </section>
 
       <!-- GEOGRAPHIC REACH -->
-      <section class="impact-reach fade-in">
+      <section class="impact-reach section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5">
 
             <div class="col-md-6">
               <h2 class="section-title">Pan-African Reach</h2>
               <div class="section-divider"></div>
-
               <p>
                 SISDI operates across multiple African countries, partnering with
                 schools, educators, and local communities to deliver sustainable
@@ -163,7 +159,7 @@
       </section>
 
       <!-- FINAL CTA -->
-      <section class="final-cta dark-section text-center fade-in">
+      <section class="final-cta dark-section section text-center fade-in">
         <div class="container py-5">
           <h2>Be Part of the Impact</h2>
           <div class="section-divider"></div>

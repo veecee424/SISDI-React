@@ -7,18 +7,15 @@
     <main>
 
       <!-- HERO -->
-      <section class="page-hero programs-hero fade-in">
-        <div class="container text-center text-white">
-          <h1 class="page-title text-white">Our Programs</h1>
-          <p class="page-lead text-white">
-            Structured initiatives that integrate football, education, and life skills
-            to support holistic child development.
-          </p>
-        </div>
-      </section>
+      <%- include('partials/page-hero', {
+        title: 'Our Programs',
+        subtitle: 'Structured initiatives that integrate football, education, and life skills to support holistic child development.',
+        variant: 'programs',
+        fadeClass: 'fade-in'
+      }) %>
 
       <!-- PROGRAM 1 -->
-      <section class="program-section fade-in">
+      <section class="program-section section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-md-6">
@@ -37,7 +34,7 @@
       </section>
 
       <!-- PROGRAM 2 -->
-      <section class="program-alt-section fade-in">
+      <section class="program-alt-section section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5 flex-md-row-reverse">
             <div class="col-md-6">
@@ -55,7 +52,7 @@
       </section>
 
       <!-- PROGRAM 3 -->
-      <section class="program-section fade-in">
+      <section class="program-section section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-md-6">
@@ -73,7 +70,7 @@
       </section>
 
       <!-- PROGRAM 4 -->
-      <section class="program-alt-section fade-in">
+      <section class="program-alt-section section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5 flex-md-row-reverse">
             <div class="col-md-6">
@@ -91,7 +88,7 @@
       </section>
 
       <!-- CTA -->
-      <section class="final-cta-section fade-in">
+      <section class="final-cta-section section fade-in">
         <div class="container py-5 text-center">
           <h2 class="final-cta-title">Support Our Programs</h2>
           <p class="final-cta-text mt-3">

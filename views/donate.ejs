@@ -7,26 +7,21 @@
     <main>
 
       <!-- PAGE HEADER -->
-      <section class="donate-header dark-section fade-in">
-        <div class="container text-center">
-          <h1 class="page-title text-white">Support SISDI</h1>
-          <div class="section-divider"></div>
-          <p class="page-lead">
-            Your donation helps provide children with access to football, education,
-            and life-changing opportunities.
-          </p>
-        </div>
-      </section>
-
+      <%- include('partials/page-hero', {
+        title: 'Support SISDI',
+        subtitle: 'Your donation helps provide children with access to football, education, and life-changing opportunities.',
+        variant: 'donate',
+        fadeClass: 'fade-in'
+      }) %>
 
       <!-- DONATION OPTIONS -->
-      <section class="donate-options fade-in">
+      <section class="donate-options section fade-in">
         <div class="container py-5">
           <div class="row g-4 align-items-stretch">
 
             <!-- BANK TRANSFER (LIGHT) -->
             <div class="col-md-6">
-              <div class="donation-card h-100">
+              <div class="donation-card card card-accent h-100">
                 <div class="donation-card-body">
                   <h4>Bank Transfer</h4>
                   <p class="text-muted">
@@ -45,7 +40,7 @@
 
             <!-- ONLINE DONATION (DARK FEATURED) -->
             <div class="col-md-6">
-              <div class="donation-card dark featured h-100">
+              <div class="donation-card card card-accent dark featured h-100">
                 <div class="donation-card-body">
                   <h4>Donate Online</h4>
 

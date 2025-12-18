@@ -1,21 +1,22 @@
 /* -------------------- Variables / Brand Colors -------------------- */
 :root {
-  --brand-green: #16A34A;
-  --brand-deep-green: #064E3B;
-  --brand-gold: #FFD700;
-  --brand-light-yellow: #FFFF75;
+  --green-dark: #064E3B;   /* Authority, trust */
+  --green-primary: #16A34A; /* Action, growth */
+  --gold: #FFD700;        /* Hope, highlights */
   --white: #FFFFFF;
+  --yellow-soft: #FFFF75;
 }
+
 
 /* -------------------- Global Body -------------------- */
 html, body {
-  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  color: var(--brand-deep-green);
+  color: #1f2933;
   padding-top: 60px; /* fixed navbar */
   scroll-behavior: smooth;
 }
@@ -23,8 +24,30 @@ body {
 /* -------------------- Headings -------------------- */
 h1, h2, h3, h4 {
   font-weight: 700;
-  color: var(--brand-green);
+  color: var(--green-dark);
 }
+
+.btn-primary {
+  background: var(--green-primary);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #12813a;
+}
+
+.btn-outline {
+  border: 2px solid var(--green-primary);
+  color: var(--green-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--green-primary);
+  color: #fff;
+}
+
 
 /* Section titles */
 .section-title {
@@ -38,8 +61,8 @@ h1, h2, h3, h4 {
 
 /* -------------------- Buttons -------------------- */
 .btn-donate {
-  background-color: var(--brand-gold);
-  color: #000;
+  background: var(--gold);
+  color: var(--green-dark);
   font-weight: 600;
   border-radius: 30px;
   padding: 12px 28px;
@@ -48,6 +71,7 @@ h1, h2, h3, h4 {
 
 .btn-donate:hover, .btn-donate:focus {
   background-color: #e6c200;
+  background: #e6c200;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   color: #000;
@@ -151,6 +175,12 @@ section[class*="-hero"] .container {
 
 p {
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    border-radius: 14px;
+  }
 }
 
 /* Card headings */
@@ -281,7 +311,7 @@ footer a:hover {
 
 .hero {
   position: relative;
-  background: url('/images/hero.jpg') center/cover no-repeat;
+  background: url('/images/hero.jpeg') center/cover no-repeat;
 }
 
 .hero::before {
@@ -617,9 +647,10 @@ footer a:hover {
 }
 
 .page-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #064E3B;
+  color: #FFD700;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .page-lead {
@@ -677,8 +708,177 @@ footer a:hover {
   background-color: #FFF9DB;
 }
 
+.bg-soft {
+  background: #f6faf8;
+}
+
+.bg-brand {
+  background: #064E3B;
+  color: #ffffff;
+}
+
+.bg-dark,
+.bg-brand {
+  color: #e5f3ee;
+}
+
+.bg-dark h1,
+.bg-dark h2 {
+  color: #ffffff;
+}
+
+.bg-cta.bg-cta {
+  background: linear-gradient(
+    135deg,
+    var(--green-dark),
+    rgba(255,215,0,0.4)
+  );
+  color: #fff;
+}
+/* =========================
+   BASE CARD
+========================= */
+
+.card {
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.10);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--green-dark);
+}
+
+.card-img-soft {
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    rgba(6,78,59,0.85),
+    rgba(255,215,0,0.45)
+  );
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.card-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.card-accent::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 48px;
+  background: var(--gold);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(22,163,74,0.1);
+  color: var(--green-primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-accent {
+  border-top: 4px solid var(--gold);
+}
+
+.footer {
+  background: linear-gradient(
+    135deg,
+    #043c2c,
+    #064E3B
+  );
+  color: #cfe9df;
+}
+
+.footer a {
+  color: #cfe9df;
+}
+
+.footer a:hover {
+  color: var(--gold);
+}
+
+
+.bg-blend {
+  background: linear-gradient(
+    to bottom,
+    rgba(6,78,59,0.08),
+    rgba(255,255,255,0)
+  );
+}
+
+.section-divider::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #FFD700;
+  display: block;
+  margin: 0 auto 2.5rem;
+  border-radius: 2px;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(#FFD700 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.15;
+}
+
+.section-overlap {
+  margin-top: -80px;
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .section-overlap {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+}
+
 .about-pan-african {
-  background: linear-gradient(135deg, #064E3B, #022C22);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 78, 59, 0.9),
+      rgba(255, 215, 0, 0.55)
+  );
 }
 
 .info-card img {
@@ -694,7 +894,7 @@ footer a:hover {
 .programs-hero {
   background:
     linear-gradient(rgba(6, 78, 59, 0.75), rgba(6, 78, 59, 0.75)),
-    url("/images/programs-hero.jpg") center / cover no-repeat;
+    url("/images/programs-hero.jpeg") center / cover no-repeat;
   padding: 6rem 0;
 }
 
@@ -713,7 +913,7 @@ footer a:hover {
 .impact-hero {
   background:
     linear-gradient(rgba(6, 78, 59, 0.75), rgba(6, 78, 59, 0.75)),
-    url("/images/impact-hero.jpg") center / cover no-repeat;
+    url("/images/impact-hero.jpeg") center / cover no-repeat;
   padding: 6rem 0;
 }
 
@@ -942,6 +1142,11 @@ footer a:hover {
   margin: 1.25rem auto 2rem;
 }
 
+.section {
+  padding: 5.5rem 1rem;
+  position: relative;
+}
+
 .donation-card {
   background: #ffffff;
   border-radius: 1.25rem;
@@ -994,4 +1199,350 @@ footer a:hover {
 .nav-link.active {
   color: #FFD700 !important;
   font-weight: 600;
+}
+
+/* =========================
+   HERO SECTION (HOMEPAGE)
+========================= */
+
+.hero-section {
+  background: linear-gradient(
+      rgba(2, 44, 34, 0.85),
+      rgba(2, 44, 34, 0.85)
+    ),
+    url('/images/hero-bg.jpeg') center / cover no-repeat;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.hero-text .lead {
+  color: #e5f3ee;
+  max-width: 520px;
+}
+
+/* Buttons */
+.hero-section .btn-outline-light {
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #064E3B;
+}
+
+/* =========================
+   HERO IMAGES
+========================= */
+
+.hero-images {
+  min-height: 420px;
+}
+
+.hero-img {
+  position: absolute;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.hero-img-1 {
+  width: 65%;
+  top: 0;
+  left: 10%;
+  z-index: 2;
+}
+
+.hero-img-2 {
+  width: 55%;
+  bottom: -40px;
+  right: 0;
+  z-index: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+  .hero-images {
+    min-height: 380px;
+    position: relative;
+  }
+
+  .hero-img-1 {
+    position: absolute;
+    width: 85%;
+    top: 0;
+    left: 5%;
+    z-index: 2;
+  }
+
+  .hero-img-2 {
+    position: absolute;
+    width: 75%;
+    bottom: -20px;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+/* =========================
+   WHY THIS MATTERS
+========================= */
+
+.why-matters-section {
+  background-color: #ffffff;
+}
+
+.why-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.why-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.why-card-body {
+  padding: 1.75rem;
+}
+
+.why-card-body h4 {
+  color: #064E3B;
+  margin-bottom: 0.75rem;
+}
+
+.why-card-body p {
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
+.impact-section {
+  background-color: #f8f9fa; /* subtle light background */
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+/* Impact Images Mosaic */
+.impact-img-wrapper {
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.impact-img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.impact-img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TESTIMONIAL / STORY BLOCK
+========================= */
+
+.testimonial-section {
+  background-color: #f9fafb;
+}
+
+.testimonial-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.testimonial-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #FFD700;
+  font-weight: 600;
+}
+
+.testimonial-content p {
+  color: #555;
+  max-width: 600px;
+}
+
+.testimonial-author {
+  color: #064E3B;
+}
+
+/* Subtle accent line */
+.testimonial-content::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FFD700;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta-section {
+  background: linear-gradient(
+    135deg,
+    #022C22 0%,
+    #064E3B 100%
+  );
+  padding: 6rem 1rem;
+}
+
+.final-cta-section .lead {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e5f3ee;
+}
+
+.final-cta-section .btn-outline-light {
+  border-radius: 999px;
+  padding: 0.75rem 2.25rem;
+}
+
+/* =========================
+   INNER PAGE HERO
+========================= */
+
+.page-hero {
+  background: linear-gradient(
+    rgba(2, 44, 34, 0.85),
+    rgba(2, 44, 34, 0.85)
+  ),
+  url('/images/page-hero-bg.jpeg') center / cover no-repeat;
+
+    padding: 6.5rem 1rem;
+}
+
+.hero-about {
+  background:
+    linear-gradient(
+      rgba(6, 78, 59, 0.88),
+      rgba(6, 78, 59, 0.88)
+    ),
+    url('/images/hero-about.jpg');
+}
+
+
+.page-hero .lead {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e5f3ee;
+}
+.page-hero {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-default {
+  background:
+    linear-gradient(
+      rgba(6, 78, 59, 0.88),
+      rgba(6, 78, 59, 0.88)
+    ),
+    url('/images/hero-default.jpeg');
+}
+
+.hero-impact {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(6, 78, 59, 0.9),
+      rgba(255, 215, 0, 0.55)
+    ),
+    url('/images/hero-impact.jpeg');
+}
+
+.hero-programs {
+  background:
+    linear-gradient(
+      rgba(22, 163, 74, 0.85),
+      rgba(22, 163, 74, 0.85)
+    ),
+    url('/images/hero-programs.jpeg');
+}
+
+.hero-donate {
+  background:
+    linear-gradient(
+      rgba(6, 78, 59, 0.92),
+      rgba(255, 215, 0, 0.4)
+    ),
+    url('/images/hero-donate.jpeg');
+}
+
+.hero-involved {
+  background:
+    linear-gradient(
+      rgba(22, 163, 74, 0.9),
+      rgba(255, 255, 255, 0.15)
+    ),
+    url('/images/hero-involved.jpeg');
+}
+
+.hero-contact {
+  background:
+    linear-gradient(
+      rgba(91, 137, 45, 0.85),
+      rgba(2, 44, 34, 0.85)
+    ),
+    url('/images/hero-contact.jpeg');
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.35)
+  );
+  pointer-events: none;
 }

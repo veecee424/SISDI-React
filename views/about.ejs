@@ -6,18 +6,16 @@
 
     <main>
 
-      <!-- HERO WITH IMAGE -->
-      <section class="about-hero fade-in">
-        <div class="container text-center">
-          <h1 class="page-title text-white">About SISDI</h1>
-          <p class="page-lead text-white">
-            Empowering children across Africa through football, education, and life skills.
-          </p>
-        </div>
-      </section>
+      <!-- HERO -->
+      <%- include('partials/page-hero', {
+        title: 'About SISDI',
+        subtitle: 'Empowering children through football and education',
+        variant: 'default',
+        fadeClass: 'fade-in'
+      }) %>
 
       <!-- MISSION & VISION -->
-      <section class="about-section fade-in">
+      <section class="about-section section fade-in">
         <div class="container py-5">
           <div class="row align-items-center g-5">
             <div class="col-md-6">
@@ -46,13 +44,13 @@
       </section>
 
       <!-- WHAT WE DO (COLOURED BLOCK) -->
-      <section class="about-alt-section fade-in">
+      <section class="about-alt-section section fade-in">
         <div class="container py-5">
           <h2 class="section-title text-center mb-5">What We Do</h2>
 
           <div class="row g-4">
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <img
                   src="/images/about-program.jpeg"
                   class="img-fluid rounded-3 mb-3"
@@ -66,7 +64,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <img
                   src="/images/about-education.jpeg"
                   class="img-fluid rounded-3 mb-3"
@@ -80,7 +78,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card">
+              <div class="info-card card card-accent">
                 <img
                   src="/images/about-life-skills.jpeg"
                   class="img-fluid rounded-3 mb-3"
@@ -96,31 +94,8 @@
         </div>
       </section>
 
-
-      <!-- PAN-AFRICAN -->
-      <section class="about-pan-african fade-in">
-        <div class="container py-5">
-          <div class="row align-items-center g-5">
-            <div class="col-md-6">
-              <h2 class="section-title text-white">Pan-African Reach</h2>
-              <p class="text-white">
-                SISDI operates across Africa, adapting to local cultures while maintaining
-                a shared commitment to youth development through sport and education.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <img
-                src="/images/about-africa.jpeg"
-                alt="Pan African youth"
-                class="img-fluid rounded-4 shadow"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- CTA -->
-      <section class="final-cta-section fade-in">
+      <section class="final-cta-section section fade-in">
         <div class="container py-5 text-center">
           <h2 class="final-cta-title">Be Part of the Change</h2>
           <p class="final-cta-text mt-3">

@@ -7,24 +7,21 @@
     <main>
 
       <!-- PAGE HEADER -->
-      <section class="get-involved-header fade-in">
-        <div class="container text-center">
-          <h1 class="page-title">Get Involved</h1>
-          <p class="page-lead">
-            Your support helps us provide children across Africa with access to football,
-            education, and life-changing opportunities.
-          </p>
-        </div>
-      </section>
+      <%- include('partials/page-hero', {
+        title: 'Get Involved',
+        subtitle: 'Your support helps us provide children across Africa with access to football, education, and life-changing opportunities.',
+        variant: 'involved',
+        fadeClass: 'fade-in'
+      }) %>
 
       <!-- INVOLVEMENT OPTIONS -->
-      <section class="get-involved-options fade-in">
+      <section class="get-involved-options section fade-in">
         <div class="container py-5">
           <div class="row g-4">
 
             <!-- VOLUNTEER -->
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
                 <div class="icon-circle">🤝</div>
                 <h4>Volunteer</h4>
                 <p>
@@ -39,7 +36,7 @@
 
             <!-- PARTNER -->
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
                 <div class="icon-circle">🏫</div>
                 <h4>Partner With Us</h4>
                 <p>
@@ -54,7 +51,7 @@
 
             <!-- SPONSOR -->
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
                 <div class="icon-circle">⚽</div>
                 <h4>Sponsor a Program</h4>
                 <p>

@@ -7,22 +7,20 @@
     <main>
 
       <!-- PAGE HEADER -->
-      <section class="contact-header fade-in">
-        <div class="container text-center">
-          <h1 class="page-title">Contact us</h1>
-          <p class="page-lead">
-            Have a question, idea, or enquiry? We’d love to hear from you.
-          </p>
-        </div>
-      </section>
+      <%- include('partials/page-hero', {
+        title: 'Contact us',
+        subtitle: 'Have a question, idea, or enquiry? We’d love to hear from you.',
+        variant: 'contact',
+        fadeClass: 'fade-in'
+      }) %>
 
       <!-- INVOLVEMENT OPTIONS -->
-      <section class="contact-options fade-in">
+      <section class="contact-options section fade-in">
         <div class="container py-5">
           <div class="row g-4 text-center">
 
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
                 <div class="icon-circle">✉️</div>
                 <h5>General Enquiry</h5>
                 <p>Questions about SISDI or our programs.</p>
@@ -30,7 +28,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
               <div class="icon-circle">🤝</div>
               <h5>Partnership Enquiry</h5>
               <p>Organisations interested in collaborating.</p>
@@ -38,7 +36,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="involve-card simple">
+              <div class="involve-card card card-accent simple">
               <div class="icon-circle">⚽</div>
               <h5>Sponsorship Enquiry</h5>
               <p>Brands and supporters exploring sponsorship opportunities.</p>
@@ -50,7 +48,7 @@
       </section>
 
       <!-- CONTACT FORM -->
-      <section class="contact-form-section fade-in">
+      <section class="contact-form-section section fade-in">
         <div class="container py-5">
           <div class="row justify-content-center">
             <div class="col-md-8">
