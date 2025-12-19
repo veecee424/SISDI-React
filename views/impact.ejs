@@ -6,84 +6,18 @@
 
     <main>
       <!-- HERO -->
-      <%- include('partials/page-hero', {
+      <!-- <%- include('partials/page-hero', {
         title: 'Our Impact',
         subtitle: 'Measuring success beyond the pitch — transforming lives through football, education, and opportunity.',
         variant: 'impact',
         fadeClass: 'fade-in'
-      }) %>
-
-
-      <!-- IMPACT STATS -->
-      <section class="impact-stats section light-band fade-in">
-        <div class="container py-5">
-          <div class="row text-center g-4">
-
-            <div class="col-md-3">
-              <div class="stat-card">
-                <h2 class="stat-number">5,000+</h2>
-                <p>Children Reached</p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="stat-card">
-                <h2 class="stat-number">50+</h2>
-                <p>Partner Schools</p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="stat-card">
-                <h2 class="stat-number">10+</h2>
-                <p>Communities Served</p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="stat-card">
-                <h2 class="stat-number">3</h2>
-                <p>Countries</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- IMPACT STORY -->
-      <section class="impact-story section fade-in">
-        <div class="container py-5">
-          <div class="row align-items-center g-5">
-
-            <!-- TEXT -->
-            <div class="col-md-6">
-              <h2 class="section-title">Changing Lives Through Football & Education</h2>
-              <div class="section-divider"></div>
-
-              <p>
-                SISDI integrates structured football training into schools,
-                using sport as a vehicle for discipline, confidence, and academic
-                excellence.
-              </p>
-
-              <p>
-                Our programs support children beyond athletics — reinforcing
-                values such as teamwork, leadership, and resilience that shape
-                lifelong success.
-              </p>
-            </div>
-
-            <!-- LAYERED IMAGES -->
-            <div class="col-md-6">
-              <div class="image-stack">
-                <img src="/images/impact-training.jpeg" alt="Football training" class="img-main">
-                <img src="/images/impact-classroom.jpeg" alt="Classroom learning" class="img-overlay">
-              </div>
-            </div>
-
-          </div>
+      }) %> -->
+      <section class="hero hero-impact text-white">
+        <div class="container text-center">
+          <h1 class="display-5 fw-bold jtm">Our Impact</h1>
+          <p class="lead mt-3">
+            Measuring success beyond the pitch — transforming lives through football, education, and opportunity.
+          </p>
         </div>
       </section>
 
@@ -98,7 +32,7 @@
           <div class="row g-4">
 
             <div class="col-md-4">
-              <div class="info-card card card-accent">
+              <div class="info-card card">
                 <h4>School-Based Football</h4>
                 <p>
                   Structured training integrated into school schedules to improve
@@ -108,7 +42,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card card card-accent">
+              <div class="info-card card">
                 <h4>Education Support</h4>
                 <p>
                   Academic mentorship ensures children remain engaged and
@@ -118,7 +52,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="info-card card card-accent">
+              <div class="info-card card">
                 <h4>Life Skills Development</h4>
                 <p>
                   Leadership, teamwork, and personal development programs
@@ -131,48 +65,105 @@
         </div>
       </section>
 
-      <!-- GEOGRAPHIC REACH -->
-      <section class="impact-reach section fade-in">
-        <div class="container py-5">
-          <div class="row align-items-center g-5">
+      <!-- IMPACT STATS -->
+      <section class="impact-stats section">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-md-3">
+              <div class="impact-stat">
+                <h2 class="counter" data-target="5000">0</h2>
+                <p>Children Reached</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="impact-stat">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Partner Schools</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="impact-stat">
+                <h2 class="counter" data-target="10">0</h2>
+                <p>Communities Served</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="impact-stat">
+                <h2 class="counter" data-target="3">0</h2>
+                <p>Countries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- IMPACT STORY -->
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center g-5">
             <div class="col-md-6">
-              <h2 class="section-title">Pan-African Reach</h2>
-              <div class="section-divider"></div>
+              <h2>Beyond the Numbers</h2>
               <p>
-                SISDI operates across multiple African countries, partnering with
-                schools, educators, and local communities to deliver sustainable
-                impact.
+                Behind every statistic is a child discovering confidence, discipline,
+                and purpose through football and education.
+              </p>
+              <p>
+                SISDI’s programs integrate structured football training with life
+                skills, mentorship, and academic focus — creating well-rounded
+                individuals.
               </p>
             </div>
-
             <div class="col-md-6">
               <img
-                src="/images/about-africa.jpeg"
-                alt="Pan-African reach"
-                class="img-fluid rounded shadow"
-              >
+                src="/images/story.jpeg"
+                class="img-fluid .image-card rounded-4 shadow"
+                alt="Children training"
+              />
             </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section bg-dark text-white">
+        <div class="container">
+          <h2 class="text-center mb-5">Impact in Motion</h2>
+
+          <!-- Slider Controls -->
+          <button class="slider-btn slider-prev" aria-label="Previous">
+            ‹
+          </button>
+          <button class="slider-btn slider-next" aria-label="Next">
+            ›
+          </button>
+
+          <div class="impact-slider" id="impactSlider">
+            <div class="impact-track">
+              <img src="/images/1.jpeg" class=".image-card" alt="">
+              <img src="/images/2.jpeg" class=".image-card" alt="">
+              <img src="/images/3.jpeg" class=".image-card" alt="">
+              <img src="/images/4.jpeg" class=".image-card" alt="">
+              <img src="/images/1.jpeg" class=".image-card" alt="">
+              <img src="/images/2.jpeg" class=".image-card" alt="">
+              <img src="/images/3.jpeg" class=".image-card" alt="">
+            </div>
           </div>
         </div>
       </section>
 
       <!-- FINAL CTA -->
-      <section class="final-cta dark-section section text-center fade-in">
-        <div class="container py-5">
+      <section class="section text-center">
+        <div class="container">
           <h2>Be Part of the Impact</h2>
-          <div class="section-divider"></div>
-          <p>
-            Your support helps us reach more children, more schools,
-            and more communities across Africa.
+          <p class="mb-4">
+            Join schools, partners, donors, and volunteers supporting
+            grassroots football development across Africa.
           </p>
-
-          <a href="/donate" class="btn btn-donate btn-lg mt-3">
-            Donate Now
+          <a href="/get-involved" class="btn btn-primary btn-lg">
+            Get Involved
           </a>
         </div>
       </section>
+
 
     </main>
 

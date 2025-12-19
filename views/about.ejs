@@ -4,104 +4,203 @@
   <body>
     <%- include('partials/navbar') %>
 
+    <%- include('partials/page-hero', {
+      title: 'About SISDI',
+      subtitle: 'Empowering children through football, education & life skills',
+      variant: 'about',
+      fadeClass: 'fade-in'
+    }) %>
+
     <main>
 
-      <!-- HERO -->
-      <%- include('partials/page-hero', {
-        title: 'About SISDI',
-        subtitle: 'Empowering children through football and education',
-        variant: 'default',
-        fadeClass: 'fade-in'
-      }) %>
-
       <!-- MISSION & VISION -->
-      <section class="about-section section fade-in">
-        <div class="container py-5">
+      <section class="section bg-soft fade-in">
+        <div class="container">
           <div class="row align-items-center g-5">
-            <div class="col-md-6">
-              <img
-                src="/images/about-mission.jpeg"
-                alt="Education and mentorship"
-                class="img-fluid rounded-4 shadow"
-              />
-            </div>
+
             <div class="col-md-6">
               <h2 class="section-title">Our Mission</h2>
               <p>
-                Schools In Soccer Development Initiative (SISDI) provides children with
-                access to quality football development within schools, integrating sport
-                and education to nurture confident, disciplined, and capable individuals.
+                SISDI exists to provide every child with access to quality football
+                development in schools, integrating football and education to nurture
+                well-rounded individuals who excel both on the field and in life.
               </p>
+            </div>
 
-              <h2 class="section-title mt-4">Our Vision</h2>
+            <div class="col-md-6">
+              <img src="/images/about-mission.jpeg" class="img-fluid rounded .image-card shadow" alt="Mission image">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+            <section class="section bg-soft fade-in">
+        <div class="container">
+          <div class="row align-items-center g-5">
+
+            <div class="col-md-6">
+              <img src="/images/about-mission.jpeg" class="img-fluid .image-card rounded shadow" alt="Mission image">
+            </div>
+
+            <div class="col-md-6">
+              <h2 class="section-title">Our Mission</h2>
               <p>
-                A future where every African child has the opportunity to grow through
-                education, sport, and strong community support.
+                SISDI exists to provide every child with access to quality football
+                development in schools, integrating football and education to nurture
+                well-rounded individuals who excel both on the field and in life.
               </p>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- WHAT WE DO (COLOURED BLOCK) -->
-      <section class="about-alt-section section fade-in">
-        <div class="container py-5">
-          <h2 class="section-title text-center mb-5">What We Do</h2>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="info-card card card-accent">
-                <img
-                  src="/images/about-program.jpeg"
-                  class="img-fluid rounded-3 mb-3"
-                  alt="Football training"
-                />
-                <h5>School-Based Football</h5>
-                <p>
-                  Structured football programs embedded into school environments.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="info-card card card-accent">
-                <img
-                  src="/images/about-education.jpeg"
-                  class="img-fluid rounded-3 mb-3"
-                  alt="Education support"
-                />
-                <h5>Education Integration</h5>
-                <p>
-                  Football used as a tool to reinforce discipline, attendance, and learning.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="info-card card card-accent">
-                <img
-                  src="/images/about-life-skills.jpeg"
-                  class="img-fluid rounded-3 mb-3"
-                  alt="Life skills and mentorship"
-                />
-                <h5>Life Skills Development</h5>
-                <p>
-                  Leadership, teamwork, resilience, and confidence built on and off the pitch.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="final-cta-section section fade-in">
-        <div class="container py-5 text-center">
-          <h2 class="final-cta-title">Be Part of the Change</h2>
-          <p class="final-cta-text mt-3">
-            Help us shape a better future for children across Africa.
+      <!-- OUR STORY -->
+      <section class="section fade-in">
+        <div class="container">
+          <h2 class="section-title text-center">Our Story</h2>
+          <div class="section-divider"></div>
+          <p>
+            SISDI began with a simple belief: every child deserves chance to play,
+            to learn, and to grow. Seeing young talent go unnoticed and unsupported
+            in schools across Africa sparked a movement. We now partner with
+            schools, coaches, volunteers, and donors to make football and education
+            a reality for children who need it most.
           </p>
-          <a href="/donate" class="btn btn-donate mt-4">Support SISDI</a>
+          <p>
+            Our journey has taken us across communities in multiple countries,
+            where we’ve witnessed lives transformed, confidence built, and
+            opportunities unlocked — all through a balanced, integrated model of sport
+            and education.
+          </p>
+        </div>
+      </section>
+
+      <!-- WHAT WE DO (PROGRAM HIGHLIGHTS) -->
+      <section class="section bg-soft fade-in">
+        <div class="container">
+          <h2 class="section-title text-center">What We Do</h2>
+          <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="/images/prog-football.jpeg" class="card-img-top .image-card" alt="Football programs">
+                <div class="card-body">
+                  <h4 class="card-title">School-Based Football</h4>
+                  <p class="card-text">Structured football programs within schools to build skills, teamwork, and discipline.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="/images/prog-education.jpeg" class="card-img-top .image-card" alt="Education support">
+                <div class="card-body">
+                  <h4 class="card-title">Education Support</h4>
+                  <p class="card-text">Academic and mentorship support that complements athletic development.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img src="/images/prog-life-skills.jpeg" class="card-img-top .image-card" alt="Life skills">
+                <div class="card-body">
+                  <h4 class="card-title">Life Skills</h4>
+                  <p class="card-text">Programs that teach leadership, confidence, resilience, and teamwork.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUES / PHILOSOPHY -->
+      <section class="section bg-soft fade-in">
+        <div class="container" style="max-width: 800px;">
+          <h2 class="section-title text-center mb-4">Our Values</h2>
+
+          <div class="values-accordion">
+
+            <!-- VALUE ITEM -->
+            <div class="value-item value-integrity">
+              <button class="value-toggle">
+                <span class="value-label">
+                  <span class="value-icon">🛡️</span>
+                  Integrity
+                </span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="value-content">
+                <p>
+                  We operate with honesty, transparency, and accountability in all
+                  our programs, partnerships, and engagements.
+                </p>
+              </div>
+            </div>
+
+            <div class="value-item value-community">
+              <button class="value-toggle">
+                <span class="value-label">
+                  <span class="value-icon">🤝</span>
+                  Community Empowerment
+                </span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="value-content">
+                <p>
+                  We believe sustainable impact begins within communities. SISDI
+                  works hand-in-hand with schools, families, and local leaders.
+                </p>
+              </div>
+            </div>
+
+            <div class="value-item value-holistic">
+              <button class="value-toggle">
+                <span class="value-label">
+                  <span class="value-icon">🌱</span>
+                  Holistic Development
+                </span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="value-content">
+                <p>
+                  Football is a tool — education, life skills, and character
+                  development are equally vital to a child’s future.
+                </p>
+              </div>
+            </div>
+
+            <div class="value-item value-partnership">
+              <button class="value-toggle">
+                <span class="value-label">
+                  <span class="value-icon">🔗</span>
+                  Partnership & Collaboration
+                </span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="value-content">
+                <p>
+                  We collaborate with schools, donors, volunteers, and institutions
+                  to maximize reach and long-term impact.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CALL TO ACTION -->
+      <section class="section bg-brand text-center text-white fade-in">
+        <div class="container">
+          <h2 class="section-title jtm">Join the Movement</h2>
+          <p>Support our mission or get involved today.</p>
+          <a href="/donate" class="btn btn-donate me-3">Donate</a>
+          <a href="/get-involved" class="btn btn-outline-light">Get Involved</a>
         </div>
       </section>
 

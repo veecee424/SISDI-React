@@ -13,25 +13,14 @@ app.use(express.static(path.join(__dirname, 'assets')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Homepage route
-app.get('/', (req, res) => {
-  res.render('home'); // renders views/home.ejs with partials
-});
-
-app.get('/donate', (req, res) => {
-  res.render('donate');
-});
-
+app.get('/', (req, res) => {res.render('home')});
+app.get('/donate', (req, res) => {res.render('donate');});
 app.get('/', (req, res) => res.render('home'));
 app.get('/about', (req, res) => res.render('about'));
-app.get('/programs', (req, res) => res.render('programs'));
 app.get('/impact', (req, res) => res.render('impact'));
 app.get('/get-involved', (req, res) => res.render('getinvolved'));
 app.get('/contact', (req, res) => res.render('contact'));
-
-// Contact form GET
-app.get('/contact', (req, res) => {
-  res.render('contact');
-});
+app.get('/contact', (req, res) => {res.render('contact')});
 
 // Contact form POST
 app.post('/contact', (req, res) => {
