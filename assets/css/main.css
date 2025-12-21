@@ -1694,6 +1694,10 @@ button:active,
   background: #a7f3d0; /* pale green */
 }
 
+.value-impact::before {
+  background: #064E3B; /* pale green */
+}
+
 .value-item.active .value-icon {
   background: rgba(255,215,0,0.15);
 }
@@ -1793,13 +1797,6 @@ button:active,
 
 .slider-next {
   right: -10px;
-}
-
-/* Hide arrows on small screens (swipe instead) */
-@media (max-width: 768px) {
-  .slider-btn {
-    display: none;
-  }
 }
 
 .impact-slider {
@@ -2124,4 +2121,62 @@ button:active,
 
 .cta-text span {
   color: #FFD700;
+}
+
+.gold-gradient-text {
+  font-weight: 900;
+  background: linear-gradient(
+    90deg,
+    #FFD700 0%,
+    #FFF4B0 45%,
+    #FFD700 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-gradient-text.glow {
+  text-shadow: 0 2px 12px rgba(255, 215, 0, 0.25);
+}
+
+.impact-stat h3 {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.impact-stat p {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 576px) {
+  .gold-gradient-text {
+    background: none;
+    color: #FFD700;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+.impact-bg {
+  background: linear-gradient(
+    135deg,
+    #064E3B 0%,
+    #0B6B4F 60%,
+    #064E3B 100%
+  );
+  padding: 4rem 1.5rem;
+}
+
+.center-align-text {
+    max-width: 700px !important;
+    margin: 1rem auto 0 !important;
+}
+
+.disabled-link {
+  pointer-events: none;
+  color: #9CA3AF;          /* muted gray */
+  cursor: not-allowed;
+  text-decoration: none;
 }
