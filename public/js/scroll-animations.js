@@ -178,3 +178,15 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.addEventListener("mouseleave", () => startAutoScroll(slider));
 });
 
+// programs accordion
+document.querySelectorAll('.program-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+
+    document.querySelectorAll('.program-item').forEach(i => {
+      if (i !== item) i.classList.remove('active');
+    });
+
+    item.classList.toggle('active');
+  });
+});

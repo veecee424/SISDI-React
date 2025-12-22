@@ -20,7 +20,7 @@ app.get('/about', (req, res) => res.render('about'));
 app.get('/impact', (req, res) => res.render('impact'));
 app.get('/get-involved', (req, res) => res.render('getinvolved'));
 app.get('/contact', (req, res) => res.render('contact'));
-app.get('/contact', (req, res) => {res.render('contact')});
+app.get('/programs', (req, res) => {res.render('programs')});
 
 // Contact form POST
 app.post('/contact', (req, res) => {
