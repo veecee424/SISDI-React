@@ -88,24 +88,23 @@
               </div>
 
             </div>
-            
-            <% if (errors) { %>
-              <div class="alert alert-danger">
-                <% errors.forEach(error => { %>
-                  <p><%= error.msg %></p>
-                <% }) %>
-              </div>
-            <% } %>
-
-            <% if (success) { %>
-              <div class="alert alert-success">
-                <%= success %>
-              </div>
-            <% } %>
 
             <!-- CONTACT FORM -->
             <div class="col-lg-6">
               <h2 class="section-title statement-text"><span>Send Us a Message</span></h2>
+              <% if (errors) { %>
+                <div class="alert alert-danger">
+                  <% errors.forEach(error => { %>
+                    <p><%= error.msg %></p>
+                  <% }) %>
+                </div>
+              <% } %>
+
+              <% if (success) { %>
+                <div class="alert alert-success">
+                  <%= success %>
+                </div>
+              <% } %>
 
               <form class="contact-form" method="POST" action="/contact">
                 <div class="row g-3">
@@ -117,7 +116,6 @@
                       placeholder="Full Name"
                       name="name"
                       required
-                      disabled
                     />
                   </div>
 
@@ -128,7 +126,6 @@
                       placeholder="Email Address"
                       name="email"
                       required
-                      disabled
                     />
                   </div>
 
@@ -139,7 +136,6 @@
                       placeholder="Subject"
                       name="subject"
                       required
-                      disabled
                     />
                   </div>
 
@@ -150,14 +146,13 @@
                       rows="5"
                       placeholder="Your message..."
                       required
-                      disabled
                     ></textarea>
                   </div>
                 </div>
 
                 <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-donate btn-lg" disabled>
-                    Coming soon
+                  <button type="submit" class="btn btn-donate btn-lg">
+                    Send Message
                   </button>
                 </div>
               </form>
