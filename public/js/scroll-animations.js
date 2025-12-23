@@ -190,3 +190,17 @@ document.querySelectorAll('.program-header').forEach(header => {
     item.classList.toggle('active');
   });
 });
+
+// Button actions on contact form
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact-form');
+  const button = document.getElementById('submitBtn');
+
+  if (!form || !button) return;
+
+  form.addEventListener('submit', () => {
+    button.disabled = true;
+    button.innerHTML = 'Sending...';
+    button.classList.add('disabled');
+  });
+});

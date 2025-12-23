@@ -26,7 +26,13 @@ app.get('/about', (req, res) => res.render('about'));
 app.get('/impact', (req, res) => res.render('impact'));
 app.get('/get-involved', (req, res) => res.render('getinvolved'));
 app.get('/contact', (req, res) => {
-  res.render('contact', { errors: null, success: null });
+  const success = req.query.success ? 'Message sent successfully!' : null;
+
+  res.render('contact', {
+    errors: false,
+    success,
+    formData: {},
+  });
 });
 app.get('/programs', (req, res) => {res.render('programs')});
 
@@ -95,11 +101,7 @@ app.post(
       });
 
       // SUCCESS
-      res.render('contact', {
-        errors: [],
-        success: 'Message sent successfully!',
-        formData: {},
-      });
+      return res.redirect('/contact?success=1');
 
     } catch (err) {
       res.render('contact', {

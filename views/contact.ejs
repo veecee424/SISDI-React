@@ -14,7 +14,7 @@
     <main>
 
             <!-- INVOLVEMENT OPTIONS -->
-      <section class="contact-options section fade-in">
+      <section class="contact-options section fade-in contact-page">
         <div class="container py-5">
           <div class="row g-4 text-center">
 
@@ -92,7 +92,7 @@
             <!-- CONTACT FORM -->
             <div class="col-lg-6">
               <h2 class="section-title statement-text"><span>Send Us a Message</span></h2>
-              <% if (errors) { %>
+              <% if (errors.length) { %>
                 <div class="alert alert-danger">
                   <% errors.forEach(error => { %>
                     <p><%= error.msg %></p>
@@ -151,8 +151,8 @@
                 </div>
 
                 <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-donate btn-lg">
-                    Send Message
+                  <button type="submit" class="btn btn-donate btn-lg"   <%= success ? 'disabled' : '' %>>
+                      <%= success ? 'Message Sent ✓' : 'Send Message' %>
                   </button>
                 </div>
               </form>
