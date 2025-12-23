@@ -2276,7 +2276,7 @@ button:active,
 
 /* ACTIVE STATE */
 .program-item.active .program-content {
-  max-height: 1000px;
+  max-height: 3000px;
 }
 
 .program-item.active .program-toggle-icon i {
