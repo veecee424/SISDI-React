@@ -1718,8 +1718,16 @@ button:active,
   }
 
   .value-label {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
     text-align: left;
+    width: 100%;
+  }
+
+  .value-icon {
+    width: 42px;
+    height: 42px;
   }
 
   .chevron {
