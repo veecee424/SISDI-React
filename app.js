@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const { body, validationResult } = require('express-validator');
 require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
@@ -10,35 +10,37 @@ app.use(express.json());
 const nodemailer = require("nodemailer");
 
 
-// Set EJS as the template engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+// Serve the React build (for production). The build output is in /build
+// Place build static middleware before public/assets so build/index.html and
+// static bundles are not masked by files in `public`.
+app.use(express.static(path.join(__dirname, 'build')));
 
-// Serve static files (CSS, images, JS)
+// Serve legacy public assets (CSS, images, JS) after build so they remain available
 app.use(express.static(path.join(__dirname, 'assets')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Homepage route
-app.get('/', (req, res) => {res.render('home')});
-app.get('/donate', (req, res) => {res.render('donate');});
-app.get('/', (req, res) => res.render('home'));
-app.get('/about', (req, res) => res.render('about'));
-app.get('/impact', (req, res) => res.render('impact'));
-app.get('/get-involved', (req, res) => res.render('getinvolved'));
-app.get('/contact', (req, res) => {
-  const success = req.query.success ? 'Message sent successfully!' : null;
+const allowedOrigins = (process.env.CLIENT_ORIGINS || 'http://localhost:3000').split(',').map(o => o.trim()).filter(Boolean);
 
-  res.render('contact', {
-    errors: false,
-    success,
-    formData: {},
-  });
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  const allowAll = allowedOrigins.includes('*');
+
+  if (origin && (allowAll || allowedOrigins.includes(origin))) {
+    res.header('Access-Control-Allow-Origin', origin);
+  } else if (!origin && allowAll) {
+    res.header('Access-Control-Allow-Origin', '*');
+  }
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+  next();
 });
-app.get('/programs', (req, res) => {res.render('programs')});
 
-// POST Contact Form
+// POST Contact Form (API)
 app.post(
-  '/contact',
+  '/api/contact',
   [
     body('name')
       .trim()
@@ -66,20 +68,17 @@ app.post(
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).render('contact', {
-        errors: errors.array(),
-        success: null,
-        formData: req.body,
-      });
+      return res.status(400).json({ success: false, errors: errors.array() });
     }
 
     const { name, email, subject, message } = req.body;
 
     try {
+      const useSecure = String(process.env.EMAIL_SECURE || '').toLowerCase() === 'true';
       const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
-        port: process.env.EMAIL_PORT,
-        secure: false,
+        port: Number(process.env.EMAIL_PORT) || 587,
+        secure: useSecure,
         auth: {
           user: process.env.EMAIL_USER,
           pass: process.env.EMAIL_PASS,
@@ -100,17 +99,29 @@ app.post(
         `,
       });
 
-      // SUCCESS
-      return res.redirect('/contact?success=1');
+      return res.json({ success: true });
 
     } catch (err) {
-      res.render('contact', {
-        errors: [{ msg: 'Failed to send message. Please try again later.' }],
-        success: null,
-      });
+      console.error('Failed to send contact email', err);
+      return res.status(500).json({ success: false, error: 'Failed to send message. Please try again later.' });
     }
   }
 );
+
+// For any other GET request, serve React's index.html so React Router can handle routing
+// Serve index.html for all non-API GET requests, but ensure it's not cached by browsers
+app.get(/.*/, (req, res) => {
+  const indexPath = path.join(__dirname, 'build', 'index.html');
+
+  // Prevent browsers (and intermediate caches) from caching index.html so clients
+  // always fetch the latest entrypoint. Static assets in /static are fingerprinted
+  // and can be cached long-term by browsers.
+  res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+
+  res.sendFile(indexPath);
+});
 
 // Start server
 app.listen(PORT, () => {

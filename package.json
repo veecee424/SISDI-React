@@ -1,12 +1,43 @@
 {
+  "name": "sisdi-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "FAST_REFRESH=false react-scripts start",
+    "build": "react-scripts build",
+    "server": "node app.js",
+    "client": "FAST_REFRESH=false react-scripts start",
+    "build-client": "react-scripts build",
+    "test-client": "react-scripts test --env=jsdom",
+    "dev": "concurrently \"cross-env PORT=5000 node app.js\" \"cross-env PORT=3000 npm run client\"",
+    "start:prod": "npm run build && npm run server"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "ejs": "^3.1.10",
     "express": "^5.2.1",
     "express-validator": "^7.3.1",
-    "nodemailer": "^7.0.12"
+    "nodemailer": "^7.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.11",
+    "react-scripts": "^5.0.1"
+  },
+  "proxy": "http://localhost:5000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
-  "watch": [".", "views", "assets"],
-  "ext": "js,json,ts,html,css,ejs",
+  "watch": [".", "assets"],
+  "ext": "js,json,ts,html,css",
   "ignore": ["node_modules/*"],
   "exec": "node app.js"
 }
